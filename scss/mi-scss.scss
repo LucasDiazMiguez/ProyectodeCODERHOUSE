@@ -177,15 +177,83 @@ body.iniciodesesion{
                 border-radius: 20px;
                 padding:10px;
                 background-color: skyblue;
-
-
                 
             }
-
         }
-    
-    
-    
-    
     }
 }
+body.crearusuario{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 19%, rgba(1,20,43,1) 40%, rgba(38,78,232,1) 72%, rgba(21,46,157,1) 83%, rgba(0,0,0,1) 95%); 
+    h2{
+        font-weight: bolder;
+        margin:20px;
+        padding: 30px;
+        padding-bottom: 50px;
+    }
+    .contecrearusuario{
+        background: rgb(49,49,57);
+        background: linear-gradient(180deg, rgba(49,49,57,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 21%, rgba(255,255,255,1) 28%, rgba(255,255,255,1) 36%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 62%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 91%, rgba(9,9,9,0.002762355161516905) 100%); 
+        margin-top:90px;
+        margin-bottom:10px;
+        padding: 40px;   
+      
+        input{
+            margin: 10px;
+            border-radius: 10em;
+            outline: 0;
+            border: 2px solid #aaa;
+            background-color: #fff;
+            color: black;
+            padding: .2em 1em;
+            box-shadow: 0 5px 10px 0px #0002;    
+        }
+
+
+    }
+    .nowrap{
+        label{
+            margin-top:8px;
+        }
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .crear__usuario__con__x{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            margin: 10px;
+            background: black;
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            a{
+                padding-left: 60px;
+                color: white;
+                text-decoration: none;
+            }
+            
+        }
+        
+        .crear__usuario__con__x:hover{
+            
+            a{
+                color: black;  
+            }
+        animation-name: boton-fachero;
+        animation-duration: 1s;
+        text-decoration: none;
+        border-radius: 20px;
+        padding:10px;
+        background-color: skyblue;
+        }
+    }
+
+
+
+        
+    

@@ -138,3 +138,58 @@ body.iniciodesesion {
         background-color: skyblue; }
         body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__x:hover a {
           color: black; }
+
+body.crearusuario {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background: #020024;
+  background: linear-gradient(180deg, #020024 19%, #01142b 40%, #264ee8 72%, #152e9d 83%, black 95%); }
+  body.crearusuario h2 {
+    font-weight: bolder;
+    margin: 20px;
+    padding: 30px;
+    padding-bottom: 50px; }
+  body.crearusuario .contecrearusuario {
+    background: #313139;
+    background: linear-gradient(180deg, rgba(49, 49, 57, 0) 0%, white 10%, white 21%, white 28%, white 36%, white 49%, white 56%, white 62%, white 71%, white 91%, rgba(9, 9, 9, 0.00276236) 100%);
+    margin-top: 90px;
+    margin-bottom: 10px;
+    padding: 40px; }
+    body.crearusuario .contecrearusuario input {
+      margin: 10px;
+      border-radius: 10em;
+      outline: 0;
+      border: 2px solid #aaa;
+      background-color: #fff;
+      color: black;
+      padding: .2em 1em;
+      box-shadow: 0 5px 10px 0px #0002; }
+  body.crearusuario .nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; }
+    body.crearusuario .nowrap label {
+      margin-top: 8px; }
+  body.crearusuario .crear__usuario__con__x {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    margin: 10px;
+    background: black;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none; }
+    body.crearusuario .crear__usuario__con__x a {
+      padding-left: 60px;
+      color: white;
+      text-decoration: none; }
+  body.crearusuario .crear__usuario__con__x:hover {
+    animation-name: boton-fachero;
+    animation-duration: 1s;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: skyblue; }
+    body.crearusuario .crear__usuario__con__x:hover a {
+      color: black; }

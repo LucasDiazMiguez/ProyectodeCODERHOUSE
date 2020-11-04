@@ -41,19 +41,19 @@ nav.menu a:hover {
   .menu__skinny__window {
     display: none; } }
 
-/*-----------------------------------ANIMACIÓN--------------------------------------*/
+footer {
+  /*-----------------------------------ANIMACIÓN--------------------------------------*/
+  /*------------------------------------------------------------------*/
+  margin-top: 250px;
+  /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
+  color: white; }
+
 @keyframes boton-fachero {
   from {
     background-color: #333; }
   to {
     background-color: skyblue;
     color: black; } }
-
-/*------------------------------------------------------------------*/
-footer {
-  margin-top: 250px;
-  /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
-  color: white; }
   footer .menufooter a {
     color: white; }
   footer .menufooter a:hover {
@@ -193,3 +193,50 @@ body.crearusuario {
     background-color: skyblue; }
     body.crearusuario .crear__usuario__con__x:hover a {
       color: black; }
+
+body.compras {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background: #020024;
+  background: linear-gradient(180deg, #020024 19%, #01142b 40%, #264ee8 72%, #152e9d 83%, black 95%); }
+  body.compras h5 {
+    margin: 20px;
+    padding: 30px;
+    color: black; }
+  body.compras .fila__producto {
+    background-color: white;
+    margin: 40px;
+    border-radius: 10px; }
+    body.compras .fila__producto .fila__producto__eliminar__ignorar {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      body.compras .fila__producto .fila__producto__eliminar__ignorar img {
+        width: 100%;
+        margin: 10px;
+        justify-self: center;
+        align-self: center;
+        border-radius: 10px; }
+    body.compras .fila__producto .fila__producto__numero__precio {
+      display: flex;
+      margin: 10px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around; }
+      body.compras .fila__producto .fila__producto__numero__precio #cantidad--de--productos {
+        width: 20%; }
+
+._dropdown-list ._dropdown-container {
+  position: relative; }
+  ._dropdown-list ._dropdown-container:not(:hover) ._dropdown {
+    opacity: 0;
+    transform: scale(0.7) translateY(10em);
+    pointer-events: none; }
+  ._dropdown-list ._dropdown-container ._dropdown {
+    transition: .3s;
+    position: absolute;
+    background-color: white; }
+
+.sticky-top {
+  position: sticky;
+  top: 0; }

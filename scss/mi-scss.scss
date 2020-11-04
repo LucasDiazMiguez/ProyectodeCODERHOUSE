@@ -54,18 +54,18 @@ nav.menu{
     }
 }
 
-/*-----------------------------------ANIMACIÓN--------------------------------------*/
-
-@keyframes boton-fachero{
-    from{background-color:#333;}
-    to{background-color: skyblue;
-    color: black}
-
-}
-/*------------------------------------------------------------------*/
 
 // FOOOOTEEEER-------------------------------------------------------------
 footer{
+    /*-----------------------------------ANIMACIÓN--------------------------------------*/
+    
+    @keyframes boton-fachero{
+        from{background-color:#333;}
+        to{background-color: skyblue;
+        color: black}
+    
+    }
+    /*------------------------------------------------------------------*/
     margin-top: 250px;
     /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
     color:  white;
@@ -255,5 +255,69 @@ body.crearusuario{
 
 
 
+  body.compras{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 19%, rgba(1,20,43,1) 40%, rgba(38,78,232,1) 72%, rgba(21,46,157,1) 83%, rgba(0,0,0,1) 95%); 
+    h5{
+        margin:20px;
+        padding: 30px;
+        color: black;
+    }
+    .fila__producto{
+        background-color: white;
+        margin: 40px;
+        border-radius: 10px;
+
+        .fila__producto__eliminar__ignorar{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            img{
+              width:100%;  
+              margin: 10px;
+              justify-self: center;
+              align-self: center;
+              border-radius: 10px;
+            }
+        }
+       .fila__producto__numero__precio{
+           display: flex;
+           margin: 10px;
+           flex-direction: row;
+           flex-wrap: nowrap;
+           justify-content: space-around;
+            #cantidad--de--productos{
+                width: 20%;
+            }
+        } 
+    }
+  }
         
     
+
+
+  ._dropdown-list {
+    ._dropdown-container {
+        position: relative;
+        &:not(:hover) { // If not hovering (*hidden*)
+            ._dropdown {
+                opacity: 0;
+                transform: scale(.7) translateY(10em);
+                pointer-events: none;
+            }
+        }
+        ._dropdown {
+            transition: .3s;
+            position: absolute;
+            // top: -2em;
+            background-color: white;
+        }
+    }
+  }
+
+  .sticky-top {
+      position: sticky;
+      top: 0;
+  }

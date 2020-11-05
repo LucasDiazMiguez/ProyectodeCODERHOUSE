@@ -1,0 +1,518 @@
+a{
+    color: inherit;
+    font-size: inherit;
+    text-decoration: inherit;
+}
+/*-------------------------------------------------Header------------- */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: white;
+    height: 150px;
+    margin: 0;
+}
+#tituloEImagen{    
+    height: 70px;
+    border-radius: 30px;
+    order: -1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 40px;
+    width: 500px;
+}
+header div input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.logo{
+    order: -1;
+    width: 60px;
+    height: 50px;
+}
+#barraDeBusqueda input{
+    order: 2;
+    width: 500px;
+    padding: 5px;
+    margin: 30px;
+}
+nav.menu {
+    display: flex;
+    margin-right: 50px;
+    flex-direction: row;
+    order: 3;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+nav.menu a:visited , nav.menu a:link{
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold ;
+    padding: 10px;
+    text-decoration: none;
+}  
+
+
+nav.menu a:hover{    
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold ;
+    padding: 10px;
+    text-decoration: none;
+    color: red;
+}
+
+
+/*-------------------------------------------------Footer------------- */
+
+
+footer {
+    background-color: #fbfeac;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20%;
+}
+
+footer h3 {
+    font-size: 30px;
+}
+.menuFooter li a:link,.menuFooter li a:visited {
+    font-size:30px;
+    color: gray;
+}
+.menuFooter li a:hover {
+    font-size:30px;
+    color: red;
+    text-decoration: underline;
+}
+
+footer ul{
+    margin-bottom: 0;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+
+/*------------------------------- Pagina de inicio-----------------------------------------------------------------------------------------*/
+.paginadeInicio{
+    font-family: 'Roboto', sans-serif;
+
+}
+/* seccion UNO */
+.inicioDeProductos{
+    background-color: rgb(158, 10, 92);
+    font-size: 30px;
+    height: 100px; 
+    margin: 0px;
+}
+
+ul.listadelInicio{
+    padding-top: 30px;
+    margin: 0;
+    display: flex;
+    list-style-type:none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  ul.listadelInicio li ul li {
+    display: none;
+  }
+  ul.listadelInicio li ul li:visited,ul.listadelInicio li ul li:linked {
+    color: white;
+    display: none;
+  }
+  ul.listadelInicio li ul li:hover{
+    color: red;
+    text-decoration: none;
+  }
+  
+  ul.listadelInicio li:hover ul li{
+      display: block;
+      margin: 0px;
+    }
+        
+  ul.listadelInicio li ul.probandoListaDesplegable{
+    display: flex;
+    flex-direction: column;
+    background-color:black;
+    position: absolute;
+    border: solid;
+    border-radius: 10px;
+    border-color:black;
+    color: white;
+    list-style-type: disc;
+ }
+ ul.listadelInicio li ul.probandoListaDesplegable i{
+        color: violet;
+        align-items:center;
+        float: left;
+    }
+  ul.listadelInicio li ul.probandoListaDesplegable li{
+    text-align: center;
+    margin: 10px;
+    margin: 10px;
+    justify-content: center;
+   }
+  ul.listadelInicio button{
+    font-size: 20px;
+    background-color: rgb(158, 10, 92);
+    text-decoration: none;
+    border: none;
+    color: white;
+}
+
+
+.listadeAccionesdeInicio{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color:black;
+    
+}
+.accionesDeIncio{
+    background-color: black;
+    margin: 0;
+    height: 100%;
+}
+.listadeAccionesdeInicio li{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: white;
+    margin: 70px;
+}
+.contenedorDeOfertas{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.superOfertasImagenes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: rgb(158, 10, 92);
+    border-radius: 20px;
+}
+
+.superOfertasImagenes li{
+  margin: 30px;
+}
+#superOfertas{
+    font-size: 70px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin: 50px;
+}
+
+#productosDestacados{
+    font-size: 70px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin: 50px;
+}
+
+
+
+/*--------------------------------------------------------Inciar sesion V(0.1)-------------------------------------------------------------------------------*/
+.paginadeIniciarSesion{
+    font-family: 'Roboto', sans-serif;
+}
+#welcome{
+    text-align: center;
+    color: FFFFFF;
+}
+.formulariodeInciodeSesion input{
+    padding: 5px;
+    background-color: rgb(245, 245, 245);
+    margin: 10px;
+    border-radius: 5px;
+}
+.formulariodeInciodeSesion input:focus{
+    padding: 5px;
+    background-color: rgb(66, 200, 253);
+    margin: 10px;
+    border-color: rgb(37, 173, 60);
+    border-radius: 5px;
+}
+#botondeIniciarSesion{
+    background-color: #6AFF35;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    float: right;
+    margin: 15px;
+}
+.iniciarSesioncon li a:link,.iniciarSesioncon li a:visited{ /*Le da forma a iniciar sesion con Face,apple google*/ 
+    display:block; /*trato a las etiquetas A como si fueran un bloque*/
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    width: 250px ;
+    color: black;
+    font-weight: bold ;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+}
+
+.iniciarSesioncon li a:hover{
+    display:block; /*trato a las etiquetas A como si fueran un bloque*/
+    border-radius: 20px;
+    border-style: solid;
+    border-color: white;
+    width: 250px ;
+    color: black;
+    font-weight: bold ;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+    
+}
+.conFacebook{
+    background-color: #0083FC;
+}
+.conGoogle{
+    background-color: #61BAC7;
+}
+.conApple{
+    background-color: white;
+}
+
+
+section.contenedorDeIniciarSesion{
+    margin-left: 10%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0B0641;
+    align-items: center;
+    width:80%;
+    border-radius: 30px;
+}
+
+
+section.contenedorDeIniciarSesion label{
+    padding-right: 30px;
+    width: 30px ;
+}
+#crearUsuarioYContraseña{
+    width: 400px;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;   
+}
+
+
+/*------------------------------------------------------crearUsario-(0.1)---------------------------------------------------------------------------*/
+.paginadeCrearUsuario{
+    font-family: 'Roboto', sans-serif;
+}
+/* seccion principal */
+.contenedorDeCrearUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0B0641;
+    border-style: solid;
+    border-radius: 20px;
+    margin-left: 400px;
+    width: 900px;
+    color: white;
+}
+
+.crearUsuarioCon li a:link,.crearUsuarioCon li a:visited{ /*Le da forma a crear Usuario con Face,apple google*/
+    display: block; /*hago que sea vea como un bloque*/
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    width: 300px ;
+    color: black;
+    font-weight: bold ;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+}
+.crearUsuarioCon li a:hover{ /*Le da forma a crear Usuario con Face,apple google*/
+    display: block; /*hago que sea vea como un bloque*/
+    border-radius: 20px;
+    border-style: solid;
+    border-color: white;
+    width: 300px ;
+    color: black;
+    font-weight: bold ;
+    padding: 20px;
+    margin: 30px;
+    font-size: 20px;
+}
+
+#crearUnUsuario{
+    text-align: center;
+    color: white;
+}
+.formularioDeCrearUsuario label{
+    padding: 10px;
+}
+.formularioDeCrearUsuario input{
+    background-color: aqua;
+    margin: 20px;
+     padding: 10px;
+     border-radius: 5px;
+}
+.formularioDeCrearUsuario input:focus{
+    padding: 10px;
+    background-color: rgb(66, 200, 253);
+    margin: 20px;
+    border-color: rgb(29, 27, 189);
+    border-radius: 5px;
+}
+
+#botondeCrearUsuario{
+    float: right;
+    background-color: #6AFF35;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+
+/*------------------------------------------------compras----------------------------------*/
+/* Compras.html-------------------------------------------*/
+.paginadeCompras{
+    font-family: 'Roboto', sans-serif;
+
+}
+/*seccion principal*/ 
+.listaDeSeccionDeCompras{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.tituloDelProducto{
+    color: black;
+}
+
+.probandoVariosGrids{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    grid-template-rows: 300px;
+    grid-template-areas:
+    "imgYEliminarEIgnorarCheckBoxes tituloDelProducto cantidadDeItems priceDelProduct";
+    padding: 30px;
+    margin: 30px ;
+    background-color: burlywood;
+    border-radius: 30px;
+}
+    
+section div.eliminarEIgnorar{
+    grid-area: imgYEliminarEIgnorarCheckBoxes;
+    align-self: center;
+}
+section h2.tituloDelProducto{
+    grid-area: tituloDelProducto;
+    align-self: center;
+}
+section input{
+    grid-area: cantidadDeItems;
+    align-self: center;
+    justify-self: center;
+}
+section strong.price{
+    align-self: center;
+    grid-area:priceDelProduct;
+}
+
+
+
+.totalaPagar{
+    text-align: center;
+    color: black;
+    background-color: gray;
+    padding: 20px;
+}
+
+h2{
+    color: inherit;
+}
+
+.listaDeSeccionDeCompras li div.eliminarEIgnorar{
+    display: flex;
+    flex-direction: column;
+}
+/*-----------------------------------Notebooks-----------------------------------------------*/
+
+.contenedorDeFiltrosYTabla{
+    justify-content:center;
+    display: flex;
+    align-items: flex-start;
+}
+ul.filtros{
+    margin-right: 150px;
+    flex-shrink: 2;
+    list-style-type: none;
+    background-color: wheat;
+    padding: 40px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: black;
+}
+ul.filtros li ul li{
+    list-style-type: none;
+}
+ul.listaDeImagenes li ul{
+    list-style-type: none;
+    padding: 30px;
+}
+ul.listaDeImagenes{
+    background-color: rgb(158, 158, 158);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.tituloFiltro{
+     font-size: 30px;
+}
+.contenedorTabla ul {
+    background-color: cadetblue;
+    border: black;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 20px;
+}
+

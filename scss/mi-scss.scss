@@ -2,8 +2,17 @@
 $negro:Black;
 $blanco:white;
 $colorfondobotonfachero: rgb(2, 41, 117);
+/*OPERACIONES CON SASS*/
 
+$padding10px: 5px*2;
 
+// @for $i from 1 through 10{
+//     $margin-#{$i}: 10px*$i;
+// }
+@mixin PadMar($pad,$marg){ //la use en body.crear usuario h2
+    padding: $pad;
+    margin:$marg;
+}
 /*HEADER------------------------------------------------------*/
 header {
     background-color: $negro;
@@ -14,7 +23,7 @@ header {
     }
     nav.menu {
         a {
-            padding: 10px;
+            padding: $padding10px;
             color: $blanco;
             border-radius: 10px;
         }
@@ -109,8 +118,8 @@ footer {
     color: $blanco;
     .menufooter a {
         color: $blanco;
-        padding: 10px;
-        margin: 2px;
+        padding: $padding10px;
+                margin: 2px;
     }
     .menufooter a:hover {
         text-decoration: none;
@@ -121,7 +130,7 @@ footer {
         
         color: $negro;
         border-radius: 5px;
-        padding: 10px;
+        padding: $padding10px;
     }
 }
 
@@ -194,7 +203,7 @@ body.iniciodesesion {
                 flex-wrap: nowrap;
                 a {
                     text-decoration: none;
-                    padding: 10px;
+                    padding: $padding10px;
                     border-radius: 10px;
                     color: $negro;
                 }
@@ -204,7 +213,7 @@ body.iniciodesesion {
                     color: $negro;
                     background-color: $colorfondobotonfachero;
                     text-decoration: none;
-                    padding: 10px;
+                    padding: $padding10px;
                     border-radius: 10px;
                 }
             }
@@ -214,7 +223,7 @@ body.iniciodesesion {
             .conteiniciarsesion__con__x {
                 margin: 10px;
                 background: $negro;
-                padding: 10px;
+                padding: $padding10px;
                 border-radius: 15px;
                 color: $blanco;
                 text-decoration: none;
@@ -231,7 +240,7 @@ body.iniciodesesion {
                 animation-name: boton-fachero;
                 text-decoration: none;
                 border-radius: 20px;
-                padding: 10px;
+                padding: $padding10px;
                 background-color: $colorfondobotonfachero;
             }
         }
@@ -251,8 +260,9 @@ body.crearusuario {
     );
     h2 {
         font-weight: bolder;
-        margin: 20px;
-        padding: 30px;
+        @include PadMar(30px,20px );
+        // margin: 20px;
+        // padding: 30px;
         padding-bottom: 50px;
     }
     .contecrearusuario {
@@ -290,7 +300,7 @@ body.crearusuario {
                 box-shadow: 0 5px 10px 0px #0002;
             }
             .nowrap {
-                padding: 10px;
+                padding: $padding10px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -312,7 +322,7 @@ body.crearusuario {
         background-color: $negro;
         margin: 10px;
         background: $negro;
-        padding: 10px;
+        padding: $padding10px;
         border-radius: 15px;
         color: $blanco;
         text-decoration: none;
@@ -326,7 +336,7 @@ body.crearusuario {
         animation-name: boton-fachero;
         text-decoration: none;
         border-radius: 20px;
-        padding: 10px;
+        padding: $padding10px;
         background-color: $colorfondobotonfachero;
         a {
             color: $negro;
@@ -395,7 +405,7 @@ body.inicio {
     );
     .fila-principal {
         margin: 10px;
-        padding: 10px;
+        padding: $padding10px;
         border-radius: 10px;
         font-size: 80%;
         height: 10%;
@@ -404,7 +414,7 @@ body.inicio {
         position: relative;
         color: $blanco;
         // box-shadow: 0 2px 5px blancosmoke;
-        padding: 10px;
+        padding: $padding10px;
         border: 2px;
         text-align: center;
         border-radius: 10px;
@@ -459,7 +469,7 @@ body.inicio {
     @media screen and (min-width: (576px)) and (max-width: 766px) {
         .titulo-lista {
             width: 40%;
-            padding: 10px;
+            padding: $padding10px;
             margin: 2px;
         }
         .sublista {
@@ -516,7 +526,7 @@ body.inicio {
         flex-direction: column;
         align-items: flex-start;
         i {
-            padding: 10px;
+            padding: $padding10px;
             margin: 5px;
             a {
                 width: 30%;
@@ -534,12 +544,12 @@ body.inicio {
         margin-top: 20px;
         background-color: $blanco;
         border-radius: 10px;
-        padding: 10px;
+        padding: $padding10px;
         h3 {
             font-size: 220%;
             font-family: "Anton", sans-serif;
             text-align: center;
-            padding: 10px;
+            padding: $padding10px;
             margin-bottom: 20px;
         }
         div.titulo-e-imagen {
@@ -553,7 +563,7 @@ body.inicio {
             margin-bottom: 25px;
             border-radius: 10px;
             h6 {
-                padding: 10px;
+                padding: $padding10px;
                 text-align: center;
             }
             img {
@@ -585,12 +595,12 @@ body.inicio {
                     color: $blanco;
                     text-align: center;
                     text-decoration: none;
-                    padding: 10px;
+                    padding: $padding10px;
                     margin-left: 30px;
                 }
-                padding: 10px;
+                padding: $padding10px;
                 :hover {
-                    padding: 10px;
+                    padding: $padding10px;
                     background: rgb(2, 41, 117);
                     background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
                     transition: 4s;
@@ -613,7 +623,7 @@ body.notebooks {
     );
     .container-de-filtros {
         margin-top: 10px;
-        padding: 10px;
+        padding: $padding10px;
         width: 100%;
         border-radius: 10em;
         outline: 0;
@@ -626,7 +636,7 @@ body.notebooks {
         border-radius: 10px;
         .filtros {
             li {
-                padding: 10px;
+                padding: $padding10px;
                 text-align: start;
             }
             list-style-type: none;
@@ -634,7 +644,7 @@ body.notebooks {
         select,
         input {
             border-radius: 10px;
-            padding: 10px;
+            padding: $padding10px;
             border: black;
             border-style: solid;
         }
@@ -703,7 +713,7 @@ body.notebooks {
 //         position: relative;
 //         background-color: $blanco;
 //         border-radius: 10px;
-//         padding: 10px;
+//         padding: $padding10px;
 
 //         list-style-type: none;
 

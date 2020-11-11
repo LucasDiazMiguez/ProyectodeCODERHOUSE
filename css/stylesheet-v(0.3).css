@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Variables de colores*/
+/*OPERACIONES CON SASS*/
 /*HEADER------------------------------------------------------*/
 header {
   background-color: Black; }
@@ -167,8 +168,8 @@ body.crearusuario {
   background: linear-gradient(180deg, #020024 19%, #01142b 40%, #264ee8 72%, #152e9d 83%, black 95%); }
   body.crearusuario h2 {
     font-weight: bolder;
-    margin: 20px;
     padding: 30px;
+    margin: 20px;
     padding-bottom: 50px; }
   body.crearusuario .contecrearusuario {
     background: #313139;

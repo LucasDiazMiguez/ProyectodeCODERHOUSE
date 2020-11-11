@@ -1,0 +1,730 @@
+/*Variables de colores*/
+$negro:Black;
+$blanco:white;
+$colorfondobotonfachero: rgb(2, 41, 117);
+
+
+/*HEADER------------------------------------------------------*/
+header {
+    background-color: $negro;
+    .titulo__imagen a {
+        display: flex;
+        text-decoration: none;
+        color: $blanco;
+    }
+    nav.menu {
+        a {
+            padding: 10px;
+            color: $blanco;
+            border-radius: 10px;
+        }
+        a:hover {
+            animation-name: boton-fachero;
+            animation-duration: 10s;
+            background: rgb(2, 41, 117);
+            background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
+            text-decoration: none;
+            color: $blanco;
+        }
+    }
+    .barra__busqueda {
+        border-radius: 10em;
+        outline: 0;
+        border: 2px solid rgb(37, 31, 31);
+        background-color: #fff;
+        color: $negro;
+        padding: 0.2em 1em;
+        box-shadow: 0 5px 10px 0 #0002;
+        transition: box-shadow 0.3s ease;
+        input {
+            border-style: none;
+            width: 90%;
+        }
+    }
+}
+/*modifica algunos items de lheader*/
+
+@media screen and (max-width: 576px) {
+    .primer-lista {
+        width: 50%;
+        background-color: darkblue;
+    }
+    .menu__big__window {
+        display: none;
+    }
+    nav.menu {
+        float: right;
+        padding: 30px;
+    }
+}
+/*modifica algunos items de lheader*/
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+    .titulo__imagen h1 {
+        display: none;
+    }
+    header {
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+    .menu__big__window {
+        display: none;
+    }
+}
+/*modifica algunos items de lheader*/
+
+@media screen and (min-width: 992px) {
+    .menu__skinny__window {
+        display: none;
+    }
+}
+
+/*-----------------------------------ANIMACIÓN--------------------------------------*/
+@keyframes boton-fachero {
+    from {
+        background-color: $negro;
+    }
+    to {
+        background: rgb(2, 41, 117);
+        background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
+        color: $negro;
+    }
+}
+
+// @keyframes example {
+//     from {
+//         background-color: red;
+//     }
+//     to {
+//         background-color: yellow;
+//     }
+// }
+
+/*------------------------------------------------------------------*/
+
+// FOOOOTEEEER-------------------------------------------------------------
+footer {
+    margin-top: 450px;
+    /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
+    color: $blanco;
+    .menufooter a {
+        color: $blanco;
+        padding: 10px;
+        margin: 2px;
+    }
+    .menufooter a:hover {
+        text-decoration: none;
+        color: $blanco;
+        animation-name: boton-fachero;
+        animation-duration: 0.5s;
+         background: rgb(2, 41, 117);
+        
+        color: $negro;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+body.iniciodesesion {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 19%,
+        rgba(1, 20, 43, 1) 40%,
+        rgba(38, 78, 232, 1) 72%,
+        rgba(21, 46, 157, 1) 83%,
+        rgba(0, 0, 0, 1) 95%
+    );
+    .conteiniciarsesion {
+        background: rgb(49, 49, 57);
+        background: linear-gradient(
+            180deg,
+            rgba(49, 49, 57, 0) 0%,
+            rgba(255, 255, 255, 1) 10%,
+            rgba(255, 255, 255, 1) 21%,
+            rgba(255, 255, 255, 1) 28%,
+            rgba(255, 255, 255, 1) 36%,
+            rgba(255, 255, 255, 1) 49%,
+            rgba(255, 255, 255, 1) 56%,
+            rgba(255, 255, 255, 1) 62%,
+            rgba(255, 255, 255, 1) 71%,
+            rgba(255, 255, 255, 1) 91%,
+            rgba(9, 9, 9, 0.002762355161516905) 100%
+        );
+        margin-top: 90px;
+        margin-bottom: 800px;
+        padding: 40px;
+        h2 {
+            font-weight: bolder;
+            margin: 90px;
+            padding-bottom: 50px;
+        }
+        .conteiniciarsesion__form {
+            input {
+                &:focus{
+                    border-color:black;
+                }
+                margin: 10px;
+                border-radius: 10em;
+                outline: 0;
+                border: 2px solid #aaa;
+                background-color: #fff;
+                color: $negro;
+                padding: 0.2em 1em;
+                box-shadow: 0 5px 10px 0px #0002;
+            }
+            .conteiniciarsesion__form__nowrap {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                label {
+                    padding-top: 10px;
+                }
+            }
+            #conteiniciarsesion__form--submit:hover {
+                animation-name: boton-fachero;
+                background-color: $colorfondobotonfachero;
+            }
+            .conteiniciarsesion__form__botones {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                a {
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 10px;
+                    color: $negro;
+                }
+                a:hover {
+                    animation-name: boton-fachero;
+                    animation-timing-function: ease-out;
+                    color: $negro;
+                    background-color: $colorfondobotonfachero;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .conteiniciarsesion__con {
+            margin-bottom: 90px;
+            .conteiniciarsesion__con__x {
+                margin: 10px;
+                background: $negro;
+                padding: 10px;
+                border-radius: 15px;
+                color: $blanco;
+                text-decoration: none;
+                a {
+                    padding-left: 60px;
+                    color: $blanco;
+                    text-decoration: none;
+                }
+            }
+            .conteiniciarsesion__con__x:hover {
+                a {
+                    color: $negro;
+                }
+                animation-name: boton-fachero;
+                text-decoration: none;
+                border-radius: 20px;
+                padding: 10px;
+                background-color: $colorfondobotonfachero;
+            }
+        }
+    }
+}
+body.crearusuario {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 19%,
+        rgba(1, 20, 43, 1) 40%,
+        rgba(38, 78, 232, 1) 72%,
+        rgba(21, 46, 157, 1) 83%,
+        rgba(0, 0, 0, 1) 95%
+    );
+    h2 {
+        font-weight: bolder;
+        margin: 20px;
+        padding: 30px;
+        padding-bottom: 50px;
+    }
+    .contecrearusuario {
+        background: rgb(49, 49, 57);
+        background: linear-gradient(
+            180deg,
+            rgba(49, 49, 57, 0) 0%,
+            rgba(255, 255, 255, 1) 10%,
+            rgba(255, 255, 255, 1) 21%,
+            rgba(255, 255, 255, 1) 28%,
+            rgba(255, 255, 255, 1) 36%,
+            rgba(255, 255, 255, 1) 49%,
+            rgba(255, 255, 255, 1) 56%,
+            rgba(255, 255, 255, 1) 62%,
+            rgba(255, 255, 255, 1) 71%,
+            rgba(255, 255, 255, 1) 91%,
+            rgba(9, 9, 9, 0.002762355161516905) 100%
+        );
+        margin-top: 90px;
+        margin-bottom: 10px;
+        padding: 50px;
+        .formulario {
+            
+            input {
+                &:focus{
+                    border-color:black;
+                    border-width: 3px;
+                }
+                border-radius: 10em;
+                outline: 0;
+                border: 2px solid #aaa;
+                background-color: #fff;
+                color: $negro;
+                padding: 0.2em 1em;
+                box-shadow: 0 5px 10px 0px #0002;
+            }
+            .nowrap {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 10px;
+                padding-right: 50px;
+                label {
+                    margin-top: 8px;
+                }
+            }
+        }
+        #botondeCrearUsuario {
+            animation-name: boton-fachero;
+            background-color: $colorfondobotonfachero;
+        }
+    }
+    .crear__usuario__con__x {
+        text-decoration: none;
+        color: $blanco;
+        background-color: $negro;
+        margin: 10px;
+        background: $negro;
+        padding: 10px;
+        border-radius: 15px;
+        color: $blanco;
+        text-decoration: none;
+        a {
+            padding-left: 60px;
+            color: $blanco;
+            text-decoration: none;
+        }
+    }
+    .crear__usuario__con__x:hover {
+        animation-name: boton-fachero;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: $colorfondobotonfachero;
+        a {
+            color: $negro;
+        }
+    }
+}
+body.compras {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 19%,
+        rgba(1, 20, 43, 1) 40%,
+        rgba(38, 78, 232, 1) 72%,
+        rgba(21, 46, 157, 1) 83%,
+        rgba(0, 0, 0, 1) 95%
+    );
+    h5 {
+        margin: 20px;
+        padding: 30px;
+        color: $negro;
+    }
+    .fila__producto {
+        input {
+            border-radius: 2px;
+        }
+        background-color: $blanco;
+        margin: 40px;
+        border-radius: 10px;
+        .fila__producto__eliminar__ignorar {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            img {
+                width: 100%;
+                margin: 10px;
+                justify-self: center;
+                align-self: center;
+                border-radius: 10px;
+            }
+        }
+        .fila__producto__numero__precio {
+            display: flex;
+            margin: 10px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            #cantidad--de--productos {
+                width: 20%;
+            }
+        }
+    }
+}
+body.inicio {
+     font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 19%,
+        rgba(1, 20, 43, 1) 40%,
+        rgba(38, 78, 232, 1) 72%,
+        rgba(21, 46, 157, 1) 83%,
+        rgba(0, 0, 0, 1) 95%
+    );
+    .fila-principal {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 80%;
+        height: 10%;
+    }
+    .titulo-lista {
+        position: relative;
+        color: $blanco;
+        // box-shadow: 0 2px 5px blancosmoke;
+        padding: 10px;
+        border: 2px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgba(78, 39, 39, 0.61);
+        transition: 1s;
+
+        &:not(:hover) {
+            .sublista,
+            .sublista-principal {
+                opacity: 0;
+                pointer-events: none;
+                transform: scale(0.7) translateY(10em);
+            }
+        }
+        &:hover {
+            transition: 0.2s;
+            background: rgb(2, 41, 117);
+            background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
+        }
+    }
+    @media screen and (min-width: (992px)) {
+        .sublista-principal {
+            width: 160%;
+        }
+       
+        .titulo-lista {
+            width: 100%;
+        }
+        .sublista,
+        .sublista-principal {
+            top: 40px;
+            left: -0.1px;
+        }
+    }
+    @media screen and (min-width: (766px)) and (max-width: (992px)) {
+        .titulo-lista {
+            width: 26%;
+            padding-right: 5px;
+            padding-bottom: 9px;
+            margin-bottom: 10px;
+            $blanco-space: nowrap;
+        }
+        .sublista,
+        .sublista-principal {
+            top: 40px;
+            left: -0.1px;
+        }
+        .sublista-principal {
+            width: 180%;
+        }
+    }
+    @media screen and (min-width: (576px)) and (max-width: 766px) {
+        .titulo-lista {
+            width: 40%;
+            padding: 10px;
+            margin: 2px;
+        }
+        .sublista {
+            left: 102%;
+            top: 1px;
+        }
+        .sublista-principal {
+            left: 102%;
+            width: 160%;
+            top: 1px;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .sublista {
+            left: 101.8%;
+            top: 1%;
+            width: 80%;
+        }
+        .elpepe {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .sublista-principal {
+            left: 101.8%;
+            top: 1%;
+            width: 110%;
+        }
+        .titulo-lista {
+            width: 50%;
+            margin: 2px;
+            padding: 5px;
+            text-align: start;
+        }
+    }
+    .sublista,
+    .sublista-principal {
+        background-color: $blanco;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px 4px blancosmoke;
+        position: absolute;
+        transition: 0.13s;
+        z-index: 1;
+        padding: 5px;
+
+        text-align: start;
+        font-size: larger;
+    }
+    .sublista-items {
+        width: 20%;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        i {
+            padding: 10px;
+            margin: 5px;
+            a {
+                width: 30%;
+                color: rgb(143, 132, 132);
+            }
+            a:hover {
+                width: 30%;
+                color: $negro;
+                font-weight: bolder;
+                text-decoration: none;
+            }
+        }
+    }
+    div.fotos-de-productos {
+        margin-top: 20px;
+        background-color: $blanco;
+        border-radius: 10px;
+        padding: 10px;
+        h3 {
+            font-size: 220%;
+            font-family: "Anton", sans-serif;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        div.titulo-e-imagen {
+            a {
+                color: $negro;
+                text-decoration: none;
+            }
+            width: 80%;
+            background-color: $blanco;
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            border-radius: 10px;
+            h6 {
+                padding: 10px;
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        div.titulo-e-imagen:hover {
+            transition: 0.1s;
+            border-width: 5px;
+            border-style: solid;
+        }
+    }
+    .acciones-de-inicio {
+        margin-top: 30px;
+        .acciones-de-inicio-div {
+            background-color: black;
+            border-radius: 10px;
+            .titulo-e-accion {
+                display: flex;
+                background-color: black;
+                color: $blanco;
+                border-radius: 10px;
+                a {
+                    display: block;
+                    width: 200%;
+                    border-radius: 10px;
+                    display: block;
+                    color: $blanco;
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 10px;
+                    margin-left: 30px;
+                }
+                padding: 10px;
+                :hover {
+                    padding: 10px;
+                    background: rgb(2, 41, 117);
+                    background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
+                    transition: 4s;
+                }
+            }
+        }
+    }
+}
+body.notebooks {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 19%,
+        rgba(1, 20, 43, 1) 40%,
+        rgba(38, 78, 232, 1) 72%,
+        rgba(21, 46, 157, 1) 83%,
+        rgba(0, 0, 0, 1) 95%
+    );
+    .container-de-filtros {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10em;
+        outline: 0;
+        border: 2px solid #aaa;
+        background-color: #fff;
+        color: black;
+        box-shadow: 0 5px 10px 0px #0002;
+        background-color: $blanco;
+        list-style-type: none;
+        border-radius: 10px;
+        .filtros {
+            li {
+                padding: 10px;
+                text-align: start;
+            }
+            list-style-type: none;
+        }
+        select,
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: black;
+            border-style: solid;
+        }
+    }
+    .imagen-con-nombre-y-precio {
+        border-radius: 10em;
+        outline: 0;
+        border: 2px solid #aaa;
+        background-color: #fff;
+        color: black;
+        padding: 0.2em 1em;
+        box-shadow: 0 5px 10px 0px #0002;
+        margin: 10px;
+        color: black;
+        border-radius: 10px;
+        img {
+            width: 100%;
+            padding: 30px;
+        }
+        h4 {
+            font-size: 100%;
+        }
+    }
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+}
+// ignorar---------------------------------------------------------------------------------------------------------------
+
+//   ._dropdown-list {
+
+//     ._dropdown-container {
+//         position: relative;
+//         &:not(:hover) { // If not hovering (*hidden*)
+//             ._dropdown {
+//                 opacity: 0;
+//                 transform: scale(.7) translateY(10em);
+//                 pointer-events: none;//cancela el hover
+//             }
+//         }
+//         ._dropdown {
+//             transition: .3s;
+//             position: absolute;
+//              top: 2em;
+//             background-color: $blanco;
+//         }
+//     }
+//   }
+
+// .primer-lista{
+//     background-color: burlywood;
+//     padding: 5px;
+//     border-radius: 10px;
+
+//     &:not(:hover){
+//         .contenido-item-primer-lista{
+//             opacity: 0;
+//             transform: scale(.7) translateY(10em);
+//             pointer-events: none;
+//             width: 100%;
+//             }
+
+//     }
+//     .item-primer-lista{
+//         position: relative;
+//         background-color: $blanco;
+//         border-radius: 10px;
+//         padding: 10px;
+
+//         list-style-type: none;
+
+//         .contenido-item-primer-lista{
+//             position: absolute;
+//             list-style-type: none;
+//             background-color: $blanco;
+//             top: 103%;
+//             left: -1%;
+//             z-index: 1;
+//             transition: .1s;
+//             border-radius: 10px;
+//             width: 100%;
+//             li{
+
+//                     display: block;
+//                     padding: 5px;
+
+//              margin-left: -20px;
+//             }
+//         }
+
+//     }
+// }

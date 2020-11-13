@@ -17,7 +17,9 @@ $padding10px: 5px*2;
 
 /*HEADER------------------------------------------------------*/
 header {
-    background-color: $negro;
+    background-color: rgba(2, 2, 2, 0.8);
+
+    opacity: 1;
 
     .titulo__imagen a {
         display: flex;
@@ -26,7 +28,7 @@ header {
         color: $blanco;
 
         img {
-            width: 100%;
+            width: 80%;
             height: auto;
         }
     }
@@ -102,7 +104,7 @@ header {
     }
 
     header {
-        margin-bottom: 10px;
+        margin-bottom: 48px;
         padding: 10px;
     }
 
@@ -152,9 +154,11 @@ footer {
     .footer-container {
         background: black;
         border-radius: 10px;
-        h3.footer__link{
+
+        h3.footer__link {
             font-family: "Anton", sans-serif;
         }
+
         .menufooter {
             margin-top: 10px;
 
@@ -196,14 +200,35 @@ body.iniciodesesion {
     font-weight: bold;
     background-color: white;
 
+    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/12/RAM-RGB.jpg");
+    // background-image: url("https://d26lpennugtm8s.cloudfront.net/stores/135/412/products/r022d408gx2_041-1e045bb705147f22a315982951152339-1024-1024.png");
+    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/12/XTREEM-ARGB-01.jpg");
+    // background-image: url("https://www.overclockers.co.uk/media/image/thumbnail/HS00FJB_248902_800x800.jpg");    
+    // background-image: url("https://www.overclockers.co.uk/media/image/thumbnail/HS00FJB_248901_800x800.jpg");
+
+    // background-image: url("https://www.pcgamesn.com/wp-content/uploads/legacy/Corsair_ARGB_memory.gif");
+    // background-image: url("https://www.pcgamesn.com/wp-content/uploads/legacy/Corsair_ARGB_memory.gif");
+    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/01/Thermaltake-Memoria-RAM-H2O.jpg");
+    // background-image: url("https://static.kemikcdn.com/2019/10/MiGamingLapX9.jpg");
+    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/02/Raijintek-fos-add-cable-ppt03.jpg");
+    // background-image: url("https://media.kingston.com/hyperx/hero/hx-hero-mice-pulsefire-fps-pro-lg.jpg");
+    // background-image: url("https://sta3-nzxtcorporation.netdna-ssl.com/uploads/share/NZXT/Hue2%20Video/RGB/Covering-marque.jpg");
+    // background-image: url("https://www.hd-tecnologia.com/imagenes/articulos/2018/10/REVIEW-CORSAIR-VENGEANCE-RGB-PRO.jpg");
+    // background-image: url("https://cwsmgmt.corsair.com/pdp/loops/QL_Ping.gif");
+    // background-image: url("https://xtrfy.com/wp/wp-content/uploads/2017/05/Xtrfy-K2-life-01-1024x512.jpg");
+    // background-image: url("https://images.pexels.com/photos/841228/pexels-photo-841228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    // background-image: url("https://images.pexels.com/photos/3812048/pexels-photo-3812048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    // background-image: url("https://images.pexels.com/photos/5303957/pexels-photo-5303957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    // background-image: url("https://image.freepik.com/foto-gratis/cerca-teclado-juegos-computer-rgb-iluminado-led-color_75775-618.jpg");
+    // background-image: url("https://24.lv/images/detailed/400/hx-product-keyboard-alloy-fps-rgb-us-3-zm-lg.jpg");
+    background-image: url("https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     .conteiniciarsesion {
-        background-image: url("https://i.blogs.es/0f4e3a/rtx3080-1/1366_2000.jpg");
-        background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
+        border-radius: 10px;
         margin-top: 90px;
-        margin-bottom: 800px;
         padding: 40px;
         color: white;
 
@@ -250,7 +275,7 @@ body.iniciodesesion {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                
+
 
                 a {
                     text-decoration: none;
@@ -308,6 +333,11 @@ body.crearusuario {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: white;
+    // background-image: url("https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("https://images.pexels.com/photos/2473183/pexels-photo-2473183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     h2 {
         font-weight: bolder;
@@ -315,20 +345,18 @@ body.crearusuario {
         // margin: 20px;
         // padding: 30px;
         padding-bottom: 50px;
+        color: white;
     }
 
     .contecrearusuario {
-        background-image: url("https://sayandsound.lewe.com/wp-content/uploads/2020/05/high-end-gaming-pc.png");
-        background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
+        border-radius: 10px;
         margin-top: 90px;
         margin-bottom: 10px;
         padding: 50px;
 
         .formulario {
-            color:WHITE;
+            color: WHITE;
+
             input {
                 &:focus {
                     border-color: black;
@@ -448,22 +476,53 @@ body.inicio {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: white;
+    border-radius: 10px;
+
+    .backgroundpic {
+        margin-top: -51px;
+        position: relative;
+
+        h2 {
+            font-size: 280%;
+            font-family: 'Merriweather Sans', sans-serif;
+            text-align: center;
+            padding: $padding10px;
+            margin-bottom: 20px;
+            color: black;
+            // white-space: nowrap;
+        }
+        @media screen and (min-width: (1302px)) {
+        .top-right {
+            position: absolute;
+            top: 18px;
+            right: 16px;
+
+        }
+    }
+        @media screen and (max-width: (1302px)) {
+        .top-right {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+        }
+    }
+}
 
     .fila-principal {
-        margin: 10px;
+        margin: 5px;
+        margin-bottom: 50px;
         padding: $padding10px;
         border-radius: 10px;
         font-size: 80%;
         height: 10%;
     }
 
-    .presentacion {
-        h2 {
-            font-size: 220%;
-            font-family: "Anton", sans-serif;
-            text-align: center;
-            padding: $padding10px;
-            margin-bottom: 20px;
+    .backgroundpic {
+        img {
+            width: 100%;
+            height: auto;
+
         }
     }
 
@@ -475,13 +534,12 @@ body.inicio {
         border: 2px;
         text-align: center;
         border-radius: 10px;
-        background-color: rgba(78, 39, 39, 0.61);
         transition: 1s;
 
         &:not(:hover) {
 
-            .sublista,
-            .sublista-principal {
+             .sublista-principal,
+            .sublista {
                 opacity: 0;
                 pointer-events: none;
                 transform: scale(0.7) translateY(10em);
@@ -498,9 +556,14 @@ body.inicio {
         }
     }
 
+    // @media screen and (min-width: (992px)){
+    //     .fila-principal {
+    //         margin-bottom: 100px;
+    //     }
+    // }
     @media screen and (min-width: (992px)) {
         .sublista-principal {
-            width: 160%;
+            width: 600%;
         }
 
         .titulo-lista {
@@ -521,11 +584,10 @@ body.inicio {
                     color: rgb(143, 132, 132);
                 }
 
-                a:hover {
-                    width: 30%;
+                &:hover {
                     color: $negro;
                     font-weight: bolder;
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
             }
         }
@@ -577,13 +639,6 @@ body.inicio {
             width: 80%;
         }
 
-        .elpepe {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
         .sublista-principal {
             left: 101.8%;
             top: 1%;
@@ -621,9 +676,9 @@ body.inicio {
         padding: 5px;
         border-style: solid;
         border-width: 2px;
-        border-color: black;
         text-align: start;
         font-size: larger;
+        border-color: gray;
     }
 
     .sublista-items {
@@ -632,24 +687,19 @@ body.inicio {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // i {
-        //     padding: $padding10px;
-        //     margin: 5px;
-        //     a {
-        //         width: 30%;
-        //         color: rgb(143, 132, 132);
-        //     }
-        //     a:hover {
-        //         width: 30%;
-        //         color: $negro;
-        //         font-weight: bolder;
-        //         text-decoration: underline;
-        //     }
-        // }
+
+        & i:hover {
+            background-color: rgba(194, 0, 0, 0.664);
+            border-radius: 5px;
+            a {
+                color: $negro;
+                text-decoration: none;
+            }
+        }
     }
 
     div.fotos-de-productos {
-        margin-top: 20px;
+        margin-top: 620px;
         background-color: $blanco;
         border-radius: 10px;
         padding: $padding10px;
@@ -670,27 +720,46 @@ body.inicio {
         }
 
         div.titulo-e-imagen {
-            a {
-                color: $negro;
-                text-decoration: none;
-            }
-
-            width: 80%;
+            position: relative;
+            color: $negro;
+            text-decoration: none;
             background-color: $blanco;
             box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin-bottom: 25px;
             margin-top: 25px;
             border-radius: 10px;
 
+            .foto {
+                position: relative;
+                top: 10px;
+                height: 60%;
+                object-fit: center;
+
+                img {
+                    width: 224px;
+                    height: 224px;
+                    object-fit: center;
+                    object-position: center;
+                }
+
+                object-fit: cover;
+                background-repeat: no-repeat;
+            }
+
+            .titulos {
+                border-color: black;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                position: relative;
+                top: 60px;
+
+            }
+
+
             h6 {
                 padding: $padding10px;
                 text-align: center;
-            }
-
-            img {
-                width: 100%;
-                height: auto;
             }
         }
 
@@ -801,7 +870,7 @@ body.notebooks {
 
 .sticky-top {
     position: sticky;
-    top: 0;
+
 }
 
 // ignorar---------------------------------------------------------------------------------------------------------------

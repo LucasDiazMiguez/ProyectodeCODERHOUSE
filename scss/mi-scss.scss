@@ -480,18 +480,40 @@ body.inicio {
     border-radius: 10px;
 
     .backgroundpic {
-        margin-top: -51px;
         position: relative;
-
-        h2 {
-            font-size: 280%;
-            font-family: 'Merriweather Sans', sans-serif;
-            text-align: center;
-            padding: $padding10px;
-            margin-bottom: 20px;
-            color: black;
-            // white-space: nowrap;
+        margin-top: -50px;
+        img {
+            width: 100%;
+            height: auto;
         }
+        .top-right{
+            position: absolute;
+            top: 4%;
+            left: 47%;
+            h2{
+                color: white;
+                font-size: 160%;
+                font-weight: bolder;
+                font-family: 'Abril Fatface', cursive;
+            }
+        }
+        .bottom-center{
+            position: absolute;
+            top: 76%;
+            left: 12%;
+            h5{
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                font-size: 230%;
+                font-weight: bolder;
+                font-family: 'Abril Fatface', cursive;
+            }
+            
+        }
+        
+     
     }
 
     .fila-principal {
@@ -503,13 +525,7 @@ body.inicio {
         height: 10%;
     }
 
-    .backgroundpic {
-        img {
-            width: 100%;
-            height: auto;
-
-        }
-    }
+  
 
     .titulo-lista {
         position: relative;
@@ -545,6 +561,13 @@ body.inicio {
 
    
     @media screen and (min-width: (992px)) {
+        .backgroundpic {
+            .top-right{
+                h2{
+                    font-size:280% ;
+                }
+            }
+        }
         .sublista-principal {
             width: 600%;
         }
@@ -700,10 +723,31 @@ body.inicio {
     @media screen and (max-width: 992px) {
         .sublista-items {
 
-            a {
-                color: black;
+           
+            i {
+                padding: $padding10px;
+                margin: 5px;
+
+                a {
+                    width: 30%;
+                    color: rgb(143, 132, 132);
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    a {
+                        color: $negro;
+                    }
+
+                    font-weight: bolder;
+                    text-decoration: none;
+                    background-color:red;
+                    border-radius: 5px;
+
+                }
             }
         }
+        
 
         .menu-botton {
             padding: 10px;
@@ -778,10 +822,10 @@ body.inicio {
     }
 
     .galeria {
-        margin-top: -38%;
+        margin-top:50px;
 
         div.fotos-de-productos {
-            margin-top: 620px;
+            margin-top: 20px;
             background-color: $blanco;
             border-radius: 10px;
             padding: $padding10px;
@@ -873,43 +917,7 @@ body.inicio {
         }
     }
 
-    .acciones-de-inicio {
-        margin-top: 30px;
-
-        .acciones-de-inicio-div {
-            background-color: black;
-            border-radius: 10px;
-
-            .titulo-e-accion {
-                display: flex;
-                background-color: black;
-                color: $blanco;
-                border-radius: 10px;
-
-                a {
-                    display: block;
-                    width: 200%;
-                    border-radius: 10px;
-                    display: block;
-                    color: $blanco;
-                    text-align: center;
-                    text-decoration: none;
-                    padding: $padding10px;
-                    margin-left: 30px;
-                }
-
-                padding: $padding10px;
-
-                :hover {
-                    padding: $padding10px;
-                    background: rgb(2, 41, 117);
-                    background: linear-gradient(90deg, rgba(2, 41, 117, 1) 9%, rgba(6, 2, 71, 1) 94%);
-                    transition: 4s;
-                }
-            }
-
-        }
-    }
+   
 }
 
 body.notebooks {

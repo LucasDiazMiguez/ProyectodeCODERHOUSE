@@ -261,11 +261,15 @@ body.crearusuario {
 body.compras {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  background-color: white; }
+  background-color: white;
+  background-image: url("https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: contain; }
   body.compras h5 {
     margin: 20px;
     padding: 30px;
-    color: Black; }
+    color: Black;
+    font-weight: bold; }
   body.compras .fila__producto {
     -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
@@ -279,19 +283,41 @@ body.compras {
       flex-direction: column;
       flex-wrap: nowrap; }
       body.compras .fila__producto .fila__producto__eliminar__ignorar img {
-        width: 100%;
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+        object-position: center;
         margin: 10px;
         justify-self: center;
         align-self: center;
         border-radius: 10px; }
+      body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes {
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-width: 2px 0 0 0;
+        border-style: solid;
+        border-color: black;
+        margin: 12px; }
+        body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes .checkbox-sub {
+          margin: 10px;
+          padding: 2px; }
     body.compras .fila__producto .fila__producto__numero__precio {
       display: flex;
       margin: 10px;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: space-around; }
+      justify-content: space-around;
+      align-content: center;
+      background-color: #1c065a;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold; }
       body.compras .fila__producto .fila__producto__numero__precio #cantidad--de--productos {
-        width: 20%; }
+        width: 20%;
+        border-radius: 10px; }
 
 body.inicio {
   font-family: "Roboto", sans-serif;

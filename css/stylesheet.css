@@ -1,6 +1,56 @@
 @charset "UTF-8";
 /*Variables de colores*/
 /*OPERACIONES CON SASS*/
+/* clase prehecha para hacer los items de una galeria--------------------------*/
+div.galeria-caja-de-item a {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  color: Black;
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden; }
+  div.galeria-caja-de-item a:hover {
+    transition: 0.2s;
+    scale: 1.05;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15); }
+  div.galeria-caja-de-item a .galeria-foto-titulo {
+    position: relative; }
+    div.galeria-caja-de-item a .galeria-foto-titulo img {
+      margin-bottom: 15px;
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      object-position: center;
+      border-color: black;
+      border-width: 0 0 2px 0;
+      border-style: solid; }
+      div.galeria-caja-de-item a .galeria-foto-titulo img:hover {
+        transition: 0.5s;
+        scale: 1.2;
+        border-style: none; }
+    div.galeria-caja-de-item a .galeria-foto-titulo .flotante {
+      padding: 5px;
+      font-size: medium;
+      color: gray;
+      text-align: center;
+      position: absolute; }
+  div.galeria-caja-de-item a .galeria-precio {
+    color: #f00;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    margin: 2px;
+    top: 30px;
+    padding: 10px; }
+
 /*HEADER------------------------------------------------------*/
 header {
   background-color: rgba(2, 2, 2, 0.8);
@@ -116,8 +166,8 @@ body.iniciodesesion {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background-color: white;
-  background-image: url("https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-position: left;
+  background-image: url("../imagenes/imagenesIniciarSesion/fondo-iniciar-sesion.jpeg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   body.iniciodesesion .conteiniciarsesion {
@@ -194,7 +244,7 @@ body.crearusuario {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background-color: white;
-  background-image: url("https://images.pexels.com/photos/2473183/pexels-photo-2473183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../imagenes/imagenesIniciarSesion/fondo-crear-usuario.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -262,7 +312,7 @@ body.compras {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background-color: white;
-  background-image: url("https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../imagenes/imagenesCompras/fondo-compras.jpeg");
   background-repeat: no-repeat;
   background-size: contain; }
   body.compras h5 {
@@ -330,6 +380,28 @@ body.inicio {
     body.inicio .backgroundpic img {
       width: 100%;
       height: auto; }
+    body.inicio .backgroundpic .top-right h2 {
+      font-size: 280%; }
+    body.inicio .backgroundpic .top-right {
+      position: absolute;
+      top: 4%;
+      left: 4%; }
+      body.inicio .backgroundpic .top-right h2 {
+        color: black;
+        font-weight: bold;
+        font-family: 'Abril Fatface', cursive; }
+        @media screen and (min-width: 1212px) {
+          body.inicio .backgroundpic .top-right h2 {
+            font-size: 260%; } }
+        @media screen and (min-width: 570px) and (max-width: 1212px) {
+          body.inicio .backgroundpic .top-right h2 {
+            font-size: 110%;
+            text-shadow: 3px -1px 16px white; } }
+        @media screen and (max-width: 570px) {
+          body.inicio .backgroundpic .top-right h2 {
+            font-size: 110%;
+            color: white;
+            text-shadow: 3px -1px 16px black; } }
   body.inicio .img-inside {
     margin-top: -300px; }
     body.inicio .img-inside .fotobottom {
@@ -350,9 +422,9 @@ body.inicio {
         font-family: "Anton", sans-serif;
         margin-bottom: 20px;
         padding: 10px; }
-      body.inicio .img-inside .fotobottom div {
+      body.inicio .img-inside .fotobottom div.overflowdeimagen {
         overflow: hidden; }
-        body.inicio .img-inside .fotobottom div img {
+        body.inicio .img-inside .fotobottom div.overflowdeimagen img {
           border-radius: 5px;
           max-width: 100%;
           width: 420px;
@@ -361,7 +433,7 @@ body.inicio {
           object-fit: contain;
           object-position: center;
           transition: 0.5s; }
-          body.inicio .img-inside .fotobottom div img:hover {
+          body.inicio .img-inside .fotobottom div.overflowdeimagen img:hover {
             scale: 1.5;
             transition: 0.5s; }
   body.inicio .fila-principal {
@@ -393,17 +465,6 @@ body.inicio {
       background: #022975;
       background: linear-gradient(90deg, #022975 9%, #060247 94%); }
   @media screen and (min-width: 992px) {
-    body.inicio .backgroundpic .top-right h2 {
-      font-size: 280%; }
-    body.inicio .top-right {
-      position: absolute;
-      top: 4%;
-      left: 47%; }
-      body.inicio .top-right h2 {
-        color: white;
-        font-size: 160%;
-        font-weight: bolder;
-        font-family: 'Abril Fatface', cursive; }
     body.inicio .sublista-principal {
       width: 600%; }
     body.inicio .sublista-almacenamiento {
@@ -487,9 +548,11 @@ body.inicio {
     body.inicio .img-inside {
       margin-top: -10px; }
     body.inicio .menu-botton {
-      padding: 10px;
-      margin: 10px;
       top: -10px; }
+      body.inicio .menu-botton i {
+        text-align: center;
+        padding: 0px;
+        margin: 10px; }
     body.inicio .sublista-almacenamiento {
       width: 140%; }
     body.inicio .titulo-lista {
@@ -509,18 +572,6 @@ body.inicio {
       top: -6%;
       left: 101%; } }
   @media screen and (max-width: 992px) {
-    body.inicio .top-right {
-      position: absolute;
-      top: 4%;
-      left: 38%;
-      transition: 0.5s; }
-      body.inicio .top-right h2 {
-        color: white;
-        font-size: 160%;
-        font-weight: bolder;
-        font-family: 'Abril Fatface', cursive; }
-    body.inicio .top-right {
-      left: 39%; }
     body.inicio .sublista-items i {
       padding: 10px;
       margin: 5px; }
@@ -536,8 +587,8 @@ body.inicio {
         body.inicio .sublista-items i:hover a {
           color: white; }
     body.inicio .menu-botton {
-      padding: 10px;
-      width: 70px;
+      padding: 5px;
+      width: 40px;
       background-color: white;
       position: relative;
       border-radius: 5px; }
@@ -550,6 +601,9 @@ body.inicio {
         position: absolute;
         opacity: 0;
         pointer-events: none; } }
+  body.inicio .caja {
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.73);
+    border-radius: 10px; }
   body.inicio .sublista,
   body.inicio .sublista-almacenamiento,
   body.inicio .sublista-principal {
@@ -583,65 +637,11 @@ body.inicio {
         body.inicio .sublista-items ii:hover a {
           color: Black;
           text-decoration: none; }
-  body.inicio .galeria {
-    margin-top: 50px; }
-    body.inicio .galeria div.fotos-de-productos {
-      margin-top: 20px;
-      background-color: white;
-      border-radius: 10px;
-      padding: 10px; }
-      body.inicio .galeria div.fotos-de-productos h3 {
-        font-size: 220%;
-        text-decoration: underline;
-        text-decoration-color: red;
-        font-family: "Anton", sans-serif;
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 20px; }
-      body.inicio .galeria div.fotos-de-productos .caja {
-        -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.73);
-        box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.73);
-        border-radius: 10px; }
-      body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a {
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        color: Black;
-        text-decoration: none;
-        background-color: white;
-        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-top: 25px;
-        margin-bottom: 30px;
-        border-radius: 10px; }
-        body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a .foto-titulo {
-          position: relative; }
-          body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a .foto-titulo img {
-            margin-bottom: 15px;
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
-            object-position: center;
-            border-color: black;
-            border-width: 0 0 2px 0;
-            border-style: solid; }
-            body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a .foto-titulo img:hover {
-              transition: 0.5s;
-              scale: 1.2;
-              border-style: none; }
-          body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a .foto-titulo .flotante {
-            text-align: center;
-            position: absolute; }
-        body.inicio .galeria div.fotos-de-productos div.titulo-e-imagen a .precio {
-          background-color: #b90303;
-          color: white;
-          border-radius: 10px;
-          position: relative;
-          margin: 2px;
-          top: 30px;
-          padding: 10px; }
+  body.inicio .fotos-de-productos h3 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: xx-large;
+    font-family: "Anton", sans-serif; }
 
 body.notebooks {
   font-family: "Roboto", sans-serif;
@@ -649,56 +649,14 @@ body.notebooks {
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); }
+  background-image: url("../imagenes/ImagenesNotebooks/fondodenotebooks.jpeg"); }
   body.notebooks .contenido {
     margin-top: 100px; }
-  body.notebooks div.titulo-e-imagen a {
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    color: Black;
-    text-decoration: none;
-    background-color: white;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 25px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    overflow: hidden; }
-    body.notebooks div.titulo-e-imagen a .foto-titulo {
-      position: relative; }
-      body.notebooks div.titulo-e-imagen a .foto-titulo img {
-        margin-top: -45px;
-        margin-bottom: 15px;
-        width: 180px;
-        height: 180px;
-        object-fit: contain;
-        object-position: center;
-        border-color: black;
-        border-width: 0 0 2px 0;
-        border-style: solid; }
-        body.notebooks div.titulo-e-imagen a .foto-titulo img:hover {
-          transition: 0.5s;
-          scale: 1.2;
-          border-style: none; }
-      body.notebooks div.titulo-e-imagen a .foto-titulo .flotante {
-        text-align: center;
-        position: absolute; }
-    body.notebooks div.titulo-e-imagen a .precio {
-      background-color: #b90303;
-      color: white;
-      border-radius: 10px;
-      position: relative;
-      margin: 2px;
-      top: 30px;
-      padding: 10px; }
   body.notebooks .container-de-filtros {
-    font-size: small;
-    margin-top: 10px;
+    font-size: smaller;
+    margin-top: 24px;
     padding: 10px;
-    width: 100%;
+    width: 180px;
     border-radius: 5px;
     background-color: #fff;
     color: black;
@@ -709,10 +667,17 @@ body.notebooks {
       padding: 5px; }
     body.notebooks .container-de-filtros select,
     body.notebooks .container-de-filtros input {
-      border-radius: 10px;
-      padding: 10px;
-      border: black;
+      border-radius: 5px;
+      border: gray;
       border-style: solid; }
+  body.notebooks .galeria-caja-de-item a {
+    height: 300px; }
+    body.notebooks .galeria-caja-de-item a .marg-top {
+      margin-top: -30px; }
+    body.notebooks .galeria-caja-de-item a h6.flotante {
+      font-size: smaller; }
+    body.notebooks .galeria-caja-de-item a .galeria-precio {
+      top: 23px; }
 
 .sticky-top {
   position: sticky; }

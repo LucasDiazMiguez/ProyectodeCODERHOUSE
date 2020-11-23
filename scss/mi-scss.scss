@@ -945,10 +945,12 @@ body.inicio {
             .fila-principal {
                 position: absolute;
                 left: 20px;
+                transition: 0.310s;
             }
 
             &:hover {
                 background-color: grey;
+                transition: 0.4s;
             }
 
             &:not(:hover) {
@@ -956,6 +958,8 @@ body.inicio {
                     position: absolute;
                     opacity: 0;
                     pointer-events: none;
+                     transition: 0.4s;
+                    scale: 1.5;
                 }
             }
         }

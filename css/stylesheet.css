@@ -244,7 +244,7 @@ body.crearusuario {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background-color: white;
-  background-image: url("https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("../imagenes/imagenesIniciarSesion/fondo-crear-usuario.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -314,7 +314,7 @@ body.compras {
   background-color: white;
   background-image: url("../imagenes/imagenesCompras/fondo-compras.jpeg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: contain; }
   body.compras h5 {
     margin: 20px;
     padding: 30px;
@@ -351,21 +351,8 @@ body.compras {
         border-color: black;
         margin: 12px; }
         body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes .checkbox-sub {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          align-content: center;
-          flex-direction: row;
           margin: 10px;
-          padding: 5px; }
-          body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes .checkbox-sub input {
-            margin: 5px; }
-          @media screen and (max-width: 576px) {
-            body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes .checkbox-sub {
-              flex-wrap: wrap; } }
-          @media screen and (min-width: 576px) {
-            body.compras .fila__producto .fila__producto__eliminar__ignorar .checkboxes .checkbox-sub {
-              flex-wrap: nowrap; } }
+          padding: 2px; }
     body.compras .fila__producto .fila__producto__numero__precio {
       display: flex;
       margin: 10px;
@@ -607,17 +594,13 @@ body.inicio {
       border-radius: 5px; }
       body.inicio .menu-botton .fila-principal {
         position: absolute;
-        left: 20px;
-        transition: 0.310s; }
+        left: 20px; }
       body.inicio .menu-botton:hover {
-        background-color: grey;
-        transition: 0.4s; }
+        background-color: grey; }
       body.inicio .menu-botton:not(:hover) .fila-principal {
         position: absolute;
         opacity: 0;
-        pointer-events: none;
-        transition: 0.4s;
-        scale: 1.5; } }
+        pointer-events: none; } }
   body.inicio .caja {
     box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.73);
     border-radius: 10px; }

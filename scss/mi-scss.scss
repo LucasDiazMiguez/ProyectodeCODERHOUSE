@@ -16,6 +16,26 @@ $padding10px: 5px*2;
     margin: $marg;
 }
 
+@mixin Facebook {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+@mixin Google {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+@mixin Apple {
+    background-image: url("https://i.pinimg.com/originals/c7/9e/e3/c79ee3ccd3bd8f8c911f87f7f4f2f41d.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
 
 
 /*-----------------------------------ANIMACIÓN--------------------------------------*/
@@ -28,6 +48,7 @@ $padding10px: 5px*2;
         color: $negro;
     }
 }
+
 @keyframes slide-to-the-left {
     0% {
         width: 0;
@@ -145,12 +166,13 @@ div.galeria-caja-de-item a {
 .header-inicio {
 
     opacity: 1;
-    text-shadow: 0px 0px 7px rgba(255,255,255,0.95), 0px 0px 1px rgba(255,255,255,0.95);        
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
 
     .titulo__imagen a {
         align-items: center;
+
         H1 {
-            text-shadow: 0px 0px 7px rgba(255,255,255,0.95), 0px 0px 1px rgba(255,255,255,0.95);          
+            text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
 
             font-size: 142%;
         }
@@ -181,21 +203,24 @@ div.galeria-caja-de-item a {
 
         a:hover {
             text-decoration: none;
-            color:$colorHeader;
+            color: $colorHeader;
             transition: 0.4s;
         }
+
         .barra__busqueda {
             color: black;
             position: relative;
+
             i {
                 padding: 5px;
-              &:hover{
-                text-decoration: none;
-                color:$colorHeader;
-              }  
-    
+
+                &:hover {
+                    text-decoration: none;
+                    color: $colorHeader;
+                }
+
             }
-    
+
             input {
                 -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
                 box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
@@ -205,17 +230,17 @@ div.galeria-caja-de-item a {
                 right: 24px;
                 opacity: 0;
                 transition: 0.5s;
-    
+
                 border-style: none;
-    
+
                 &:focus {
                     opacity: 1;
-    
+
                     // border-width: 1px;
                     border-color: rgb(255, 255, 255);
                 }
             }
-    
+
             &:hover {
                 input {
                     animation-name: slide-to-the-left;
@@ -223,20 +248,22 @@ div.galeria-caja-de-item a {
                     animation-timing-function: linear;
                     transition: 1s;
                     opacity: 1;
-    
+
                 }
             }
-    
+
         }
     }
 
 }
+
 .header-normal {
 
     opacity: 1;
 
     .titulo__imagen a {
         align-items: center;
+
         H1 {
             font-size: 182%;
         }
@@ -267,21 +294,24 @@ div.galeria-caja-de-item a {
 
         a:hover {
             text-decoration: none;
-            color:$colorHeader;
+            color: $colorHeader;
             transition: 0.4s;
         }
+
         .barra__busqueda {
             color: white;
             position: relative;
+
             i {
                 padding: 5px;
-              &:hover{
-                text-decoration: none;
-                color:$colorHeader;
-              }  
-    
+
+                &:hover {
+                    text-decoration: none;
+                    color: $colorHeader;
+                }
+
             }
-    
+
             input {
                 -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
                 box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
@@ -291,17 +321,17 @@ div.galeria-caja-de-item a {
                 right: 24px;
                 opacity: 0;
                 transition: 0.5s;
-    
+
                 border-style: none;
-    
+
                 &:focus {
                     opacity: 1;
-    
+
                     // border-width: 1px;
                     border-color: rgb(255, 255, 255);
                 }
             }
-    
+
             &:hover {
                 input {
                     animation-name: slide-to-the-left;
@@ -309,14 +339,15 @@ div.galeria-caja-de-item a {
                     animation-timing-function: linear;
                     transition: 1s;
                     opacity: 1;
-    
+
                 }
             }
-    
+
         }
     }
 
 }
+
 /*modifica algunos items de lheader*/
 
 @media screen and (max-width: 576px) {
@@ -388,7 +419,7 @@ footer {
     /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
     color: negro;
 
-    background:#f0f3f5;
+    background: #f0f3f5;
 
     .footer-container {
         border-radius: 10px;
@@ -502,10 +533,12 @@ body.iniciodesesion {
                     padding-top: 10px;
                 }
             }
-            #conteiniciarsesion__form--submit{
+
+            #conteiniciarsesion__form--submit {
                 margin-left: 0;
             }
-                #conteiniciarsesion__form--submit:hover {
+
+            #conteiniciarsesion__form--submit:hover {
                 color: red;
                 font-weight: bold;
                 transition: 0.3s;
@@ -517,7 +550,7 @@ body.iniciodesesion {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                justify-content:center;
+                justify-content: center;
                 align-items: center;
                 white-space: nowrap;
                 margin-left: 2px;
@@ -528,10 +561,14 @@ body.iniciodesesion {
                     // padding: $padding10px;
                     border-radius: 10px;
                     color: $blanco;
+                    padding: 3px;
+
                 }
 
                 a:hover {
                     color: red;
+                    background-color:black;
+                    padding: 3px;
                     text-decoration: none;
                     transition: 0.3s;
                 }
@@ -550,17 +587,14 @@ body.iniciodesesion {
                 // background-image: url("../imagenes/imagenesIniciarSesion/kisspng-carplay-macbook-pro-apple-imac-united-states-name-5aec2389501085.788623481525425033328.png");
                 // background-image: url("https://www.clipartkey.com/mpngs/m/204-2047835_apple-logo-with-words-clipart-png-download-apple.png");
                 // background-image: url("https://e7.pngegg.com/pngimages/398/839/png-clipart-carplay-macbook-pro-apple-imac-united-states-name-text-logo.png");
-                background-image: url("https://i.pinimg.com/originals/c7/9e/e3/c79ee3ccd3bd8f8c911f87f7f4f2f41d.png");
-                background-size: contain;
-                background-position:right ;
-                background-repeat: no-repeat;
-
+                @include Apple();
                 a {
                     padding-left: 60px;
                     color: white;
                     text-decoration: none;
                 }
             }
+
             .conteiniciarsesion__con__facebook {
                 margin: 10px;
                 background: $negro;
@@ -568,10 +602,8 @@ body.iniciodesesion {
                 border-radius: 15px;
                 color: $blanco;
                 text-decoration: none;
-                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
-                background-size: contain;
-                background-position:right ;
-                background-repeat: no-repeat;
+                @include Facebook();
+
 
                 a {
                     padding-left: 60px;
@@ -579,18 +611,15 @@ body.iniciodesesion {
                     text-decoration: none;
                 }
             }
-            .conteiniciarsesion__con__google{
+
+            .conteiniciarsesion__con__google {
                 margin: 10px;
                 background: $negro;
                 padding: $padding10px;
                 border-radius: 15px;
                 color: $blanco;
                 text-decoration: none;
-                // background-image: url("https://aviddemand.com/wp-content/uploads/2016/11/googlelogo_color_284x96dp.png");
-                background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
-                background-size: contain;
-                background-position:right ;
-                background-repeat: no-repeat;
+                @include Google();
 
                 a {
                     padding-left: 60px;
@@ -598,18 +627,6 @@ body.iniciodesesion {
                     text-decoration: none;
                 }
             }
-
-            // .conteiniciarsesion__con__x:hover {
-            //     a {
-            //         color: $blanco;
-            //     }
-
-            //     animation-name: boton-fachero;
-            //     text-decoration: none;
-            //     border-radius: 20px;
-            //     padding: $padding10px;
-            //     background-color: $colorfondobotonfachero;
-            // }
         }
     }
 }
@@ -681,43 +698,111 @@ body.crearusuario {
         }
 
         #botondeCrearUsuario {
-            animation-name: boton-fachero;
-            color: $blanco;
-            background-color: $colorfondobotonfachero;
+            margin: 10px;
+            color: $negro;
+            &:hover{
+                color: red;
+                font-weight: bold;
+                transition: 0.3s;
+                border-color: black;
+                background-color: black;
+            }
         }
     }
 
-    .crear__usuario__con__x {
-        text-decoration: none;
-        color: $blanco;
-        background-color: $negro;
-        margin: 10px;
-        background: $negro;
-        padding: $padding10px;
-        border-radius: 15px;
-        color: $blanco;
-        text-decoration: none;
+    // .crear__usuario__con__x {
+    //     text-decoration: none;
+    //     color: $blanco;
+    //     background-color: $negro;
+    //     margin: 10px;
+    //     background: $negro;
+    //     padding: $padding10px;
+    //     border-radius: 15px;
+    //     color: $blanco;
+    //     text-decoration: none;
+    //     .conGoogle{
+    //         @include Google();
+    //         background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
 
-        a {
-            padding-left: 60px;
+    //     }
+    //     .conFacebook{
+    //         @include Facebook();
+    //     }
+    //     a {
+    //         padding-left: 60px;
+    //         color: $blanco;
+    //         text-decoration: none;
+    //     }
+    // }
+
+    // .crear__usuario__con__x:hover {
+    //     animation-name: boton-fachero;
+    //     text-decoration: none;
+    //     border-radius: 20px;
+    //     padding: $padding10px;
+    //     background-color: $colorfondobotonfachero;
+
+    //     a {
+    //         color: $blanco;
+    //     }
+    // }
+    .conteiniciarsesion__con {
+        margin-bottom: 90px;
+
+        .conteiniciarsesion__con__apple {
+            margin: 10px;
+            background: black;
+            padding: $padding10px;
+            border-radius: 15px;
+            text-decoration: none;
+            // background-image: url("../imagenes/imagenesIniciarSesion/kisspng-carplay-macbook-pro-apple-imac-united-states-name-5aec2389501085.788623481525425033328.png");
+            // background-image: url("https://www.clipartkey.com/mpngs/m/204-2047835_apple-logo-with-words-clipart-png-download-apple.png");
+            // background-image: url("https://e7.pngegg.com/pngimages/398/839/png-clipart-carplay-macbook-pro-apple-imac-united-states-name-text-logo.png");
+            @include Apple();
+            a {
+                padding-left: 60px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .conteiniciarsesion__con__facebook {
+            margin: 10px;
+            background: $negro;
+            padding: $padding10px;
+            border-radius: 15px;
             color: $blanco;
             text-decoration: none;
+            @include Facebook();
+
+
+            a {
+                padding-left: 60px;
+                color: $blanco;
+                text-decoration: none;
+            }
         }
-    }
 
-    .crear__usuario__con__x:hover {
-        animation-name: boton-fachero;
-        text-decoration: none;
-        border-radius: 20px;
-        padding: $padding10px;
-        background-color: $colorfondobotonfachero;
-
-        a {
+        .conteiniciarsesion__con__google {
+            margin: 10px;
+            background: $negro;
+            padding: $padding10px;
+            border-radius: 15px;
             color: $blanco;
-        }
-    }
-}
+            text-decoration: none;
+            @include Google();
 
+            a {
+                padding-left: 60px;
+                color: $blanco;
+                text-decoration: none;
+            }
+        }
+}
+}
 body.compras {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -772,9 +857,10 @@ body.compras {
                 margin: 12px;
 
                 .checkbox-sub {
-                    input{
+                    input {
                         margin: 5px;
                     }
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -782,11 +868,13 @@ body.compras {
                     flex-direction: row;
                     margin: 10px;
                     padding: 5px;
-                    @media screen and (max-width: 576px){
-                        flex-wrap: wrap;    
+
+                    @media screen and (max-width: 576px) {
+                        flex-wrap: wrap;
                     }
-                    @media screen and (min-width: 576px){
-                        flex-wrap: nowrap;    
+
+                    @media screen and (min-width: 576px) {
+                        flex-wrap: nowrap;
                     }
                 }
             }
@@ -846,9 +934,9 @@ body.inicio {
             h2 {
                 color: black;
                 font-weight: bold;
-                    font-family: 'Anton', sans-serif;
+                font-family: 'Anton', sans-serif;
 
-    font-family: 'Balsamiq Sans', cursive;
+                font-family: 'Balsamiq Sans', cursive;
 
                 @media screen and (min-width: (1212px)) {
                     font-size: 260%;
@@ -979,7 +1067,8 @@ body.inicio {
         //     display:none;
         // }
         .menu-botton {
-            text-shadow: 0px 0px 7px rgba(255,255,255,0.95), 0px 0px 1px rgba(255,255,255,0.95);            margin-bottom:76%;
+            text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
+            margin-bottom: 76%;
             display: block;
         }
 
@@ -1156,7 +1245,7 @@ body.inicio {
 
 
         .menu-botton {
-            margin-bottom:76%;
+            margin-bottom: 76%;
             padding: 5px;
             width: 40px;
             background-color: white;
@@ -1179,17 +1268,18 @@ body.inicio {
                     position: absolute;
                     opacity: 0;
                     pointer-events: none;
-                     transition: 0.4s;
+                    transition: 0.4s;
                     scale: 1.5;
                 }
             }
         }
     }
 
-    .caja{
+    .caja {
         box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.73);
         border-radius: 10px
     }
+
     .sublista,
     .sublista-almacenamiento,
     .sublista-principal {

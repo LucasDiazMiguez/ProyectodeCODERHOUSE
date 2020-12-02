@@ -304,9 +304,12 @@ body.iniciodesesion {
         margin-left: 15px;
         text-decoration: none;
         border-radius: 10px;
-        color: white; }
+        color: white;
+        padding: 3px; }
       body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form .conteiniciarsesion__form__botones a:hover {
         color: red;
+        background-color: black;
+        padding: 3px;
         text-decoration: none;
         transition: 0.3s; }
     body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con {
@@ -398,31 +401,60 @@ body.crearusuario {
         body.crearusuario .contecrearusuario .formulario .nowrap label {
           margin-top: 8px; }
     body.crearusuario .contecrearusuario #botondeCrearUsuario {
-      animation-name: boton-fachero;
+      margin: 10px;
+      color: Black; }
+      body.crearusuario .contecrearusuario #botondeCrearUsuario:hover {
+        color: red;
+        font-weight: bold;
+        transition: 0.3s;
+        border-color: black;
+        background-color: black; }
+  body.crearusuario .conteiniciarsesion__con {
+    margin-bottom: 90px; }
+    body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__apple {
+      margin: 10px;
+      background: black;
+      padding: 10px;
+      border-radius: 15px;
+      text-decoration: none;
+      background-image: url("https://i.pinimg.com/originals/c7/9e/e3/c79ee3ccd3bd8f8c911f87f7f4f2f41d.png");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat; }
+      body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__apple a {
+        padding-left: 60px;
+        color: white;
+        text-decoration: none; }
+    body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__facebook {
+      margin: 10px;
+      background: Black;
+      padding: 10px;
+      border-radius: 15px;
       color: white;
-      background-color: #022975; }
-  body.crearusuario .crear__usuario__con__x {
-    text-decoration: none;
-    color: white;
-    background-color: Black;
-    margin: 10px;
-    background: Black;
-    padding: 10px;
-    border-radius: 15px;
-    color: white;
-    text-decoration: none; }
-    body.crearusuario .crear__usuario__con__x a {
-      padding-left: 60px;
+      text-decoration: none;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat; }
+      body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__facebook a {
+        padding-left: 60px;
+        color: white;
+        text-decoration: none; }
+    body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__google {
+      margin: 10px;
+      background: Black;
+      padding: 10px;
+      border-radius: 15px;
       color: white;
-      text-decoration: none; }
-  body.crearusuario .crear__usuario__con__x:hover {
-    animation-name: boton-fachero;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: #022975; }
-    body.crearusuario .crear__usuario__con__x:hover a {
-      color: white; }
+      text-decoration: none;
+      background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat; }
+      body.crearusuario .conteiniciarsesion__con .conteiniciarsesion__con__google a {
+        padding-left: 60px;
+        color: white;
+        text-decoration: none; }
 
 body.compras {
   font-family: "Roboto", sans-serif;

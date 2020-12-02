@@ -1,6 +1,28 @@
 @charset "UTF-8";
 /*Variables de colores*/
 /*OPERACIONES CON SASS*/
+/*-----------------------------------ANIMACIÓN--------------------------------------*/
+@keyframes boton-fachero {
+  from {
+    background-color: Black; }
+  to {
+    color: Black; } }
+
+@keyframes slide-to-the-left {
+  0% {
+    width: 0; }
+  20% {
+    width: 10vh; }
+  40% {
+    width: 20vh; }
+  60% {
+    width: 30vh; }
+  80% {
+    width: 40vh; }
+  100% {
+    width: 50vh; } }
+
+/*------------------------------------------------------------------*/
 /* clase prehecha para hacer los items de una galeria--------------------------*/
 div.galeria-caja-de-item a {
   height: 400px;
@@ -52,40 +74,117 @@ div.galeria-caja-de-item a {
     padding: 10px; }
 
 /*HEADER------------------------------------------------------*/
-header {
-  background-color: rgba(2, 2, 2, 0.8);
+.header-inicio {
+  opacity: 1;
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95); }
+  .header-inicio .titulo__imagen a {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: Black; }
+    .header-inicio .titulo__imagen a H1 {
+      text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
+      font-size: 142%; }
+    .header-inicio .titulo__imagen a img {
+      width: 80%;
+      height: auto; }
+  .header-inicio nav.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 85%; }
+    .header-inicio nav.menu a {
+      padding: 10px;
+      color: black;
+      border-radius: 10px; }
+    .header-inicio nav.menu a:hover {
+      text-decoration: none;
+      color: red;
+      transition: 0.4s; }
+    .header-inicio nav.menu .barra__busqueda {
+      color: black;
+      position: relative; }
+      .header-inicio nav.menu .barra__busqueda i {
+        padding: 5px; }
+        .header-inicio nav.menu .barra__busqueda i:hover {
+          text-decoration: none;
+          color: red; }
+      .header-inicio nav.menu .barra__busqueda input {
+        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        width: 50vh;
+        position: absolute;
+        right: 24px;
+        opacity: 0;
+        transition: 0.5s;
+        border-style: none; }
+        .header-inicio nav.menu .barra__busqueda input:focus {
+          opacity: 1;
+          border-color: white; }
+      .header-inicio nav.menu .barra__busqueda:hover input {
+        animation-name: slide-to-the-left;
+        animation-duration: 0.315s;
+        animation-timing-function: linear;
+        transition: 1s;
+        opacity: 1; }
+
+.header-normal {
   opacity: 1; }
-  header .titulo__imagen a {
+  .header-normal .titulo__imagen a {
+    align-items: center;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: white; }
-    header .titulo__imagen a img {
+    .header-normal .titulo__imagen a H1 {
+      font-size: 182%; }
+    .header-normal .titulo__imagen a img {
       width: 80%;
       height: auto; }
-  header nav.menu a {
-    padding: 10px;
-    color: white;
-    border-radius: 10px; }
-  header nav.menu a:hover {
-    animation-name: boton-fachero;
-    animation-duration: 10s;
-    background: #022975;
-    background: linear-gradient(90deg, #022975 9%, #060247 94%);
-    text-decoration: none;
-    color: white; }
-  header .barra__busqueda {
-    border-radius: 10em;
-    outline: 0;
-    border: 2px solid #251f1f;
-    background-color: #fff;
-    color: Black;
-    padding: 0.2em 1em;
-    box-shadow: 0 5px 10px 0 #0002;
-    transition: box-shadow 0.3s ease; }
-    header .barra__busqueda input {
-      border-style: none;
-      width: 90%; }
+  .header-normal nav.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 85%; }
+    .header-normal nav.menu a {
+      padding: 10px;
+      color: white;
+      border-radius: 10px; }
+    .header-normal nav.menu a:hover {
+      text-decoration: none;
+      color: red;
+      transition: 0.4s; }
+    .header-normal nav.menu .barra__busqueda {
+      color: white;
+      position: relative; }
+      .header-normal nav.menu .barra__busqueda i {
+        padding: 5px; }
+        .header-normal nav.menu .barra__busqueda i:hover {
+          text-decoration: none;
+          color: red; }
+      .header-normal nav.menu .barra__busqueda input {
+        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        width: 50vh;
+        position: absolute;
+        right: 24px;
+        opacity: 0;
+        transition: 0.5s;
+        border-style: none; }
+        .header-normal nav.menu .barra__busqueda input:focus {
+          opacity: 1;
+          border-color: white; }
+      .header-normal nav.menu .barra__busqueda:hover input {
+        animation-name: slide-to-the-left;
+        animation-duration: 0.315s;
+        animation-timing-function: linear;
+        transition: 1s;
+        opacity: 1; }
 
 /*modifica algunos items de lheader*/
 @media screen and (max-width: 576px) {
@@ -124,23 +223,11 @@ header {
   .menu__skinny__window {
     display: none; } }
 
-/*-----------------------------------ANIMACIÓN--------------------------------------*/
-@keyframes boton-fachero {
-  from {
-    background-color: Black; }
-  to {
-    background: #022975;
-    background: linear-gradient(90deg, #022975 9%, #060247 94%);
-    color: Black; } }
-
-/*------------------------------------------------------------------*/
 footer {
   margin-top: 200px;
   /* box-shadow: 10px 5px 10px 10px rgba(179, 184, 168, 0.333 ); */
   color: negro;
-  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px -12px 28px 11px rgba(0, 0, 0, 0.46);
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px -12px 28px 11px rgba(0, 0, 0, 0.46);
-  background: #eeeaea; }
+  background: #f0f3f5; }
   footer .footer-container {
     border-radius: 10px; }
     footer .footer-container h3.footer__link {
@@ -197,48 +284,77 @@ body.iniciodesesion {
       align-items: center; }
       body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form .conteiniciarsesion__form__nowrap label {
         padding-top: 10px; }
+    body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form #conteiniciarsesion__form--submit {
+      margin-left: 0; }
     body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form #conteiniciarsesion__form--submit:hover {
-      animation-name: boton-fachero;
-      color: white;
-      background-color: #022975; }
+      color: red;
+      font-weight: bold;
+      transition: 0.3s;
+      border-color: black;
+      background-color: black; }
     body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form .conteiniciarsesion__form__botones {
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap; }
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      margin-left: 2px; }
       body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form .conteiniciarsesion__form__botones a {
+        margin-left: 15px;
         text-decoration: none;
-        padding: 10px;
         border-radius: 10px;
         color: white; }
       body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__form .conteiniciarsesion__form__botones a:hover {
-        animation-name: boton-fachero;
-        animation-timing-function: ease-out;
-        color: white;
-        background-color: #022975;
+        color: red;
         text-decoration: none;
-        padding: 10px;
-        border-radius: 10px; }
+        transition: 0.3s; }
     body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con {
       margin-bottom: 90px; }
-      body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__x {
+      body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__apple {
+        margin: 10px;
+        background: black;
+        padding: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+        background-image: url("https://i.pinimg.com/originals/c7/9e/e3/c79ee3ccd3bd8f8c911f87f7f4f2f41d.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat; }
+        body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__apple a {
+          padding-left: 60px;
+          color: white;
+          text-decoration: none; }
+      body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__facebook {
         margin: 10px;
         background: Black;
         padding: 10px;
         border-radius: 15px;
         color: white;
-        text-decoration: none; }
-        body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__x a {
+        text-decoration: none;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat; }
+        body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__facebook a {
           padding-left: 60px;
           color: white;
           text-decoration: none; }
-      body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__x:hover {
-        animation-name: boton-fachero;
-        text-decoration: none;
-        border-radius: 20px;
+      body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__google {
+        margin: 10px;
+        background: Black;
         padding: 10px;
-        background-color: #022975; }
-        body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__x:hover a {
-          color: white; }
+        border-radius: 15px;
+        color: white;
+        text-decoration: none;
+        background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat; }
+        body.iniciodesesion .conteiniciarsesion .conteiniciarsesion__con .conteiniciarsesion__con__google a {
+          padding-left: 60px;
+          color: white;
+          text-decoration: none; }
 
 body.crearusuario {
   font-family: "Roboto", sans-serif;
@@ -385,8 +501,10 @@ body.compras {
 body.inicio {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  background-color: white;
-  border-radius: 10px; }
+  border-radius: 10px;
+  background-size: contain;
+  background-image: url("https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat; }
   body.inicio .backgroundpic {
     position: relative;
     margin-top: -50px; }
@@ -397,12 +515,13 @@ body.inicio {
       font-size: 280%; }
     body.inicio .backgroundpic .top-right {
       position: absolute;
-      top: 4%;
+      top: -10%;
       left: 4%; }
       body.inicio .backgroundpic .top-right h2 {
         color: black;
         font-weight: bold;
-        font-family: 'Abril Fatface', cursive; }
+        font-family: 'Anton', sans-serif;
+        font-family: 'Balsamiq Sans', cursive; }
         @media screen and (min-width: 1212px) {
           body.inicio .backgroundpic .top-right h2 {
             font-size: 260%; } }
@@ -450,15 +569,15 @@ body.inicio {
             scale: 1.5;
             transition: 0.5s; }
   body.inicio .fila-principal {
-    margin-top: -16px;
+    margin-top: 0;
     margin-bottom: 50px;
     padding: 10px;
     border-radius: 10px;
-    font-size: 80%;
+    font-size: 90%;
     height: 10%; }
   body.inicio .titulo-lista {
     position: relative;
-    color: white;
+    color: Black;
     padding: 10px;
     border: 2px;
     text-align: center;
@@ -475,8 +594,7 @@ body.inicio {
       border-color: black; }
     body.inicio .titulo-lista:hover {
       transition: 0.2s;
-      background: #022975;
-      background: linear-gradient(90deg, #022975 9%, #060247 94%); }
+      color: red; }
   @media screen and (min-width: 992px) {
     body.inicio .sublista-principal {
       width: 600%; }
@@ -485,6 +603,8 @@ body.inicio {
     body.inicio #menu-icon {
       display: none; }
     body.inicio .menu-botton {
+      text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
+      margin-bottom: 76%;
       display: block; }
     body.inicio .titulo-lista {
       width: 100%; }
@@ -509,20 +629,18 @@ body.inicio {
         body.inicio .sublista-principal i:hover {
           font-weight: bolder;
           text-decoration: none;
-          background-color: #060557;
           border-radius: 5px; }
           body.inicio .sublista i:hover a,
           body.inicio .sublista-almacenamiento i:hover a,
           body.inicio .sublista-principal i:hover a {
-            color: white; } }
+            color: red; } }
   @media screen and (min-width: 766px) and (max-width: 992px) {
     body.inicio .titulo-lista {
       width: 100%;
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
-      color: white;
-      background: black;
+      color: black;
       left: -27px;
       top: 22px; }
     body.inicio .sublista,
@@ -542,7 +660,7 @@ body.inicio {
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
-      color: white;
+      color: black;
       background: black;
       left: -29px;
       top: 22px; }
@@ -573,7 +691,7 @@ body.inicio {
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
-      color: white;
+      color: black;
       background: black;
       left: -29px;
       top: 22px; }
@@ -595,11 +713,11 @@ body.inicio {
       body.inicio .sublista-items i:hover {
         font-weight: bolder;
         text-decoration: none;
-        background-color: #060557;
         border-radius: 5px; }
         body.inicio .sublista-items i:hover a {
           color: white; }
     body.inicio .menu-botton {
+      margin-bottom: 76%;
       padding: 5px;
       width: 40px;
       background-color: white;

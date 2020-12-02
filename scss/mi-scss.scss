@@ -193,7 +193,7 @@ div.galeria-caja-de-item a {
         align-items: center;
         flex-direction: row;
         justify-content: flex-end;
-        font-size: 85%;
+        font-size: 100%;
 
         a {
             padding: $padding10px;
@@ -567,7 +567,7 @@ body.iniciodesesion {
 
                 a:hover {
                     color: red;
-                    background-color:black;
+                    background-color: black;
                     padding: 3px;
                     text-decoration: none;
                     transition: 0.3s;
@@ -588,6 +588,7 @@ body.iniciodesesion {
                 // background-image: url("https://www.clipartkey.com/mpngs/m/204-2047835_apple-logo-with-words-clipart-png-download-apple.png");
                 // background-image: url("https://e7.pngegg.com/pngimages/398/839/png-clipart-carplay-macbook-pro-apple-imac-united-states-name-text-logo.png");
                 @include Apple();
+
                 a {
                     padding-left: 60px;
                     color: white;
@@ -700,7 +701,8 @@ body.crearusuario {
         #botondeCrearUsuario {
             margin: 10px;
             color: $negro;
-            &:hover{
+
+            &:hover {
                 color: red;
                 font-weight: bold;
                 transition: 0.3s;
@@ -762,6 +764,7 @@ body.crearusuario {
             // background-image: url("https://www.clipartkey.com/mpngs/m/204-2047835_apple-logo-with-words-clipart-png-download-apple.png");
             // background-image: url("https://e7.pngegg.com/pngimages/398/839/png-clipart-carplay-macbook-pro-apple-imac-united-states-name-text-logo.png");
             @include Apple();
+
             a {
                 padding-left: 60px;
                 color: white;
@@ -801,8 +804,9 @@ body.crearusuario {
                 text-decoration: none;
             }
         }
+    }
 }
-}
+
 body.compras {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -818,85 +822,165 @@ body.compras {
         font-weight: bold;
     }
 
-    .fila__producto {
-        -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
-        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
+    .contenedor-de-filas {
+        background-color: rgb(0, 0, 0);
+        padding: 2px;
+        border-radius: 5px;
 
-        input {
-            border-radius: 2px;
-        }
-
-        background-color: $blanco;
-        margin: 40px;
-        border-radius: 10px;
-
-        .fila__producto__eliminar__ignorar {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-
-            img {
-                width: 250px;
-                height: 250px;
-                object-fit: contain;
-                object-position: center;
-                margin: 10px;
-                justify-self: center;
-                align-self: center;
+        .fila__producto__titulo {
+            h4 {
+                color: white;
+                padding-left: 70px;
+                padding-top: 35px;
                 border-radius: 10px;
             }
+        }
 
-            .checkboxes {
-                align-self: center;
+
+        .fila__producto {
+            -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
+            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 15px 9px 26px 11px rgba(0, 0, 0, 0.46);
+
+            input {
+                border-radius: 2px;
+            }
+
+            background-color: $blanco;
+            margin: 15px;
+            border-radius: 10px;
+            font-size: 80%;
+
+            .fila__producto__eliminar__ignorar {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: nowrap;
-                border-width: 2px 0 0 0;
-                border-style: solid;
-                border-color: black;
-                margin: 12px;
 
-                .checkbox-sub {
-                    input {
-                        margin: 5px;
-                    }
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    flex-direction: row;
+                img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: contain;
+                    object-position: center;
                     margin: 10px;
-                    padding: 5px;
+                    justify-self: center;
+                    align-self: center;
+                    border-radius: 10px;
+                }
 
-                    @media screen and (max-width: 576px) {
-                        flex-wrap: wrap;
-                    }
+                .checkboxes {
+                    align-self: center;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    border-width: 2px 0 0 0;
+                    border-style: solid;
+                    border-color: black;
+                    margin: -12px;
 
-                    @media screen and (min-width: 576px) {
-                        flex-wrap: nowrap;
+                    .checkbox-sub {
+                        input {
+                            margin: 5px;
+                        }
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        flex-direction: row;
+                        margin: 10px;
+                        padding: 5px;
+
+                        @media screen and (max-width: 576px) {
+                            flex-wrap: wrap;
+                        }
+
+                        @media screen and (min-width: 576px) {
+                            flex-wrap: nowrap;
+                        }
                     }
                 }
             }
-        }
 
-        .fila__producto__numero__precio {
-            display: flex;
-            margin: 10px;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            align-content: center;
-            background-color: rgb(28, 6, 90);
-            padding: 10px;
-            border-radius: 10px;
-            color: $blanco;
-            font-weight: bold;
+            .fila__producto__numero__precio {
+                display: flex;
+                // margin: 10px;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-content: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
 
-            #cantidad--de--productos {
-                width: 20%;
-                border-radius: 10px;
+                .button-minus-plus {
+                    display: flex;
+                    flex-direction: row;
+                    align-content: center;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    justify-content: space-evenly;
+                    border-style: none;
+                    color: white;
+                    width: 30%;
+                    margin: 2px;
+
+                    button {
+                        border-style: none;
+                        background-color: gray;
+                        margin: 1px;
+                        padding: 0;
+                        color: white;
+
+                        i {
+                            padding: 2px;
+                            margin: 4px;
+                        }
+
+                        &:hover {
+                            background-color: rgb(73, 71, 71);
+                            transition: 0.3s;
+                            border-radius: 8px;
+                        }
+
+                    }
+
+                    border-radius: 5px;
+                    background: gray;
+                }
+
+                strong {
+                    border-radius: 10px;
+                    background-color: rgb(141, 6, 6);
+                    padding: 10px;
+                    white-space: nowrap;
+                }
+
+                #cantidad--de--productos {
+                    color: black;
+                    padding: 10px;
+                    width: 30%;
+                    border-color: gray;
+                    border-width: 1px;
+                    border-radius: 10px;
+                }
             }
+        }
+        .fila__confirmar__pago{
+            h5{
+                color: white;
+                white-space: nowrap;
+            }
+            input{
+                border-style: none;
+                background-color: sienna;
+                padding: 15px;
+                border-radius: 5px;
+            &:hover{
+                scale: 1.1;
+                background-color: rgb(255, 0, 34);
+                transition: 0.3s;
+            }
+            }
+
         }
     }
 }

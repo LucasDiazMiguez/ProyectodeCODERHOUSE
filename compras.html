@@ -15,14 +15,14 @@
     <script src="js/wow.min.js"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://kit.fontawesome.com/357d076d0b.js" crossorigin="anonymous"></script>
-    <meta name="keywords" content=" Compras,Productos, carrito,Brand"/>
+    <meta name="keywords" content=" Compras,Productos, carrito,Brand" />
 
 </head>
 
 <body class="compras">
-    <header class="sticky-top">
-        <div class="container header-container">
-            <div class="row align-items-center justify-content-around">
+    <header class="sticky-top header-inicio">
+        <div class="container-fluid header-container">
+            <div class="row align-items-center justify-content-between">
                 <div class="col-6 col-sm-2 col-md-2 col-lg-3">
                     <div class="titulo__imagen">
                         <a href="index.html" class="navbar-brand">
@@ -31,13 +31,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-sm-5 col-md-5 col-lg-4">
-                    <div class="barra__busqueda">
-                        <input class="input-search" type="text" placeholder="buscar">
-                    </div>
-                </div>
-                <div class=" col-8 col-sm-5 col-md-5 col-lg-5">
+                <div class=" col-8 col-sm-5 col-md-5 col-lg-9 justify-content-">
                     <nav class="menu">
+                        <div class="barra__busqueda">
+                            <input class="input-search" type="text" placeholder="buscar">
+                            <i class="fas fa-search"></i>
+                        </div>
                         <a href="iniciodesesion.html" class="menu__skinny__window"><button class=""><i
                                     class="fas fa-user-circle"></i></button></a>
                         <a href="iniciodesesion.html" class="menu__big__window">Iniciar Sesión</a>
@@ -54,7 +53,10 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div class="container contenedor-de-filas">
+        <div class="row align-items-center fila__producto__titulo ">
+            <h4>Productos en su carrito:</h4>
+        </div>
         <div class="row justify-content-around align-items-center fila__producto ">
             <div class="col-lg-3 fila__producto__eliminar__ignorar">
                 <img src="imagenes/imagenesCompras/579976-radeon-6900xt-6800xt-1260x709.webp" alt="">
@@ -74,6 +76,14 @@
             </div>
             <div class="col-lg-3 fila__producto__numero__precio">
                 <input type="number" name="cantidad" id="cantidad--de--productos">
+                <div class="button-minus-plus">
+                    <button>
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
                 <strong class="price"> Precio: 90000$ </strong>
             </div>
 
@@ -103,7 +113,8 @@
         </div>
         <div class="row justify-content-around align-items-center fila__producto ">
             <div class="col-lg-3 fila__producto__eliminar__ignorar">
-                <img src="imagenes/imagenesCompras/Memoria Ram Corsair Vengeance Rgb Pro 2x8 16gb 3200mhz Whitewebp.webp" alt="">
+                <img src="imagenes/imagenesCompras/Memoria Ram Corsair Vengeance Rgb Pro 2x8 16gb 3200mhz Whitewebp.webp"
+                    alt="">
                 <div class="checkboxes">
                     <div class="checkbox-sub">
                         <label for="eliminar">Eliminar</label>
@@ -149,7 +160,8 @@
         </div>
         <div class="row justify-content-around align-items-center fila__producto ">
             <div class="col-lg-3 fila__producto__eliminar__ignorar">
-                <img src="imagenes/imagenesCompras/Mouse Gamer Hyperx Pulsefire Surge Rgb 16000dpi Led Rgb Ambidiestro Gtia Oficial Full.webp" alt="">
+                <img src="imagenes/imagenesCompras/Mouse Gamer Hyperx Pulsefire Surge Rgb 16000dpi Led Rgb Ambidiestro Gtia Oficial Full.webp"
+                    alt="">
                 <div class="checkboxes">
                     <div class="checkbox-sub">
                         <label for="eliminar">Eliminar</label>
@@ -172,7 +184,8 @@
         </div>
         <div class="row justify-content-around align-items-center fila__producto ">
             <div class="col-lg-3 fila__producto__eliminar__ignorar">
-                <img src="imagenes/imagenesCompras/Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica de color negro con luz RGB.webp" alt="">
+                <img src="imagenes/imagenesCompras/Teclado gamer HyperX Alloy Origins QWERTY Red español latinoamérica de color negro con luz RGB.webp"
+                    alt="">
                 <div class="checkboxes">
                     <div class="checkbox-sub">
                         <label for="eliminar">Eliminar</label>
@@ -190,6 +203,17 @@
             <div class="col-lg-3 fila__producto__numero__precio">
                 <input type="number" name="cantidad" id="cantidad--de--productos">
                 <strong class="price"> Precio: 14950$ </strong>
+            </div>
+
+        </div>
+        <div class="row justify-content-around align-items-center fila__confirmar__pago">
+            <div class="col-lg-5">
+            </div>
+            <div class="col-lg-3">
+                <h5>TOTAL: $179000.-</h5>
+            </div>
+            <div class="col-lg-3">
+                <input type="submit" value="Confirmar compra">
             </div>
 
         </div>

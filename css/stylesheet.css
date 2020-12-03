@@ -8,7 +8,7 @@
   to {
     color: Black; } }
 
-@keyframes slide-to-the-left {
+@keyframes slide-to-the-left-50 {
   0% {
     width: 0; }
   20% {
@@ -21,6 +21,34 @@
     width: 40vh; }
   100% {
     width: 50vh; } }
+
+@keyframes slide-to-the-left-30 {
+  0% {
+    width: 0; }
+  20% {
+    width: 6vh; }
+  40% {
+    width: 12vh; }
+  60% {
+    width: 18vh; }
+  80% {
+    width: 24vh; }
+  100% {
+    width: 30vh; } }
+
+@keyframes slide-to-the-left-20 {
+  0% {
+    width: 0; }
+  20% {
+    width: 4vh; }
+  40% {
+    width: 8vh; }
+  60% {
+    width: 12vh; }
+  80% {
+    width: 16vh; }
+  100% {
+    width: 20vh; } }
 
 /*------------------------------------------------------------------*/
 /* clase prehecha para hacer los items de una galeria--------------------------*/
@@ -77,23 +105,34 @@ div.galeria-caja-de-item a {
 .header-inicio {
   opacity: 1;
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95); }
-  .header-inicio .titulo__imagen a {
-    align-items: center;
+  .header-inicio .titulo__imagen {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     text-decoration: none;
-    color: Black; }
-    .header-inicio .titulo__imagen a H1 {
-      text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
-      font-size: 142%; }
-    .header-inicio .titulo__imagen a img {
-      width: 80%;
-      height: auto; }
+    align-items: center;
+    justify-content: space-between; }
+    .header-inicio .titulo__imagen a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-decoration: none;
+      justify-content: space-evenly;
+      align-items: center;
+      color: Black; }
+      .header-inicio .titulo__imagen a H1 {
+        text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
+        font-size: 142%; }
+      .header-inicio .titulo__imagen a img {
+        justify-self: flex-start;
+        width: 80%;
+        height: auto; }
   .header-inicio nav.menu {
     display: flex;
     align-items: center;
-    flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
     font-size: 100%; }
     .header-inicio nav.menu a {
       padding: 10px;
@@ -103,33 +142,64 @@ div.galeria-caja-de-item a {
       text-decoration: none;
       color: red;
       transition: 0.4s; }
-    .header-inicio nav.menu .barra__busqueda {
-      color: black;
-      position: relative; }
-      .header-inicio nav.menu .barra__busqueda i {
-        padding: 5px; }
-        .header-inicio nav.menu .barra__busqueda i:hover {
-          text-decoration: none;
-          color: red; }
-      .header-inicio nav.menu .barra__busqueda input {
-        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        width: 50vh;
-        position: absolute;
-        right: 24px;
-        opacity: 0;
-        transition: 0.5s;
-        border-style: none; }
-        .header-inicio nav.menu .barra__busqueda input:focus {
-          opacity: 1;
-          border-color: white; }
-      .header-inicio nav.menu .barra__busqueda:hover input {
-        animation-name: slide-to-the-left;
-        animation-duration: 0.315s;
-        animation-timing-function: linear;
-        transition: 1s;
-        opacity: 1; }
+  .header-inicio .barra__busqueda__1 {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 100%;
+    color: black;
+    position: relative; }
+    .header-inicio .barra__busqueda__1 i {
+      padding: 5px; }
+      .header-inicio .barra__busqueda__1 i:hover {
+        text-decoration: none;
+        color: red; }
+    .header-inicio .barra__busqueda__1 input {
+      -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      position: absolute;
+      right: 24px;
+      opacity: 0;
+      transition: 0.5s;
+      border-style: none; }
+      .header-inicio .barra__busqueda__1 input:focus {
+        opacity: 1;
+        border-color: white; }
+    .header-inicio .barra__busqueda__1:hover input {
+      animation-duration: 0.315s;
+      animation-timing-function: linear;
+      transition: 1s;
+      opacity: 1; }
+  .header-inicio .barra__busqueda__2 {
+    justify-self: flex-end;
+    font-size: 100%;
+    color: black;
+    position: relative; }
+    .header-inicio .barra__busqueda__2 i {
+      padding: 5px; }
+      .header-inicio .barra__busqueda__2 i:hover {
+        text-decoration: none;
+        color: red; }
+    .header-inicio .barra__busqueda__2 input {
+      -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      width: 20vh;
+      position: absolute;
+      right: 24px;
+      opacity: 0;
+      transition: 0.5s;
+      border-style: none; }
+      .header-inicio .barra__busqueda__2 input:focus {
+        opacity: 1;
+        border-color: white; }
+    .header-inicio .barra__busqueda__2:hover input {
+      animation-name: slide-to-the-left-20;
+      animation-duration: 0.315s;
+      animation-timing-function: linear;
+      transition: 1s;
+      opacity: 1; }
 
 .header-normal {
   opacity: 1; }
@@ -158,15 +228,15 @@ div.galeria-caja-de-item a {
       text-decoration: none;
       color: red;
       transition: 0.4s; }
-    .header-normal nav.menu .barra__busqueda {
+    .header-normal nav.menu .barra__busqueda__1 {
       color: white;
       position: relative; }
-      .header-normal nav.menu .barra__busqueda i {
+      .header-normal nav.menu .barra__busqueda__1 i {
         padding: 5px; }
-        .header-normal nav.menu .barra__busqueda i:hover {
+        .header-normal nav.menu .barra__busqueda__1 i:hover {
           text-decoration: none;
           color: red; }
-      .header-normal nav.menu .barra__busqueda input {
+      .header-normal nav.menu .barra__busqueda__1 input {
         -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
         box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
@@ -176,17 +246,62 @@ div.galeria-caja-de-item a {
         opacity: 0;
         transition: 0.5s;
         border-style: none; }
-        .header-normal nav.menu .barra__busqueda input:focus {
+        .header-normal nav.menu .barra__busqueda__1 input:focus {
           opacity: 1;
           border-color: white; }
-      .header-normal nav.menu .barra__busqueda:hover input {
+      .header-normal nav.menu .barra__busqueda__1:hover input {
         animation-name: slide-to-the-left;
+        animation-duration: 0.315s;
+        animation-timing-function: linear;
+        transition: 1s;
+        opacity: 1; }
+    .header-normal nav.menu .barra__busqueda__2 {
+      justify-self: flex-end;
+      font-size: 100%;
+      color: black;
+      position: relative; }
+      .header-normal nav.menu .barra__busqueda__2 i {
+        padding: 5px; }
+        .header-normal nav.menu .barra__busqueda__2 i:hover {
+          text-decoration: none;
+          color: red; }
+      .header-normal nav.menu .barra__busqueda__2 input {
+        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        width: 20vh;
+        position: absolute;
+        right: 24px;
+        opacity: 0;
+        transition: 0.5s;
+        border-style: none; }
+        .header-normal nav.menu .barra__busqueda__2 input:focus {
+          opacity: 1;
+          border-color: white; }
+      .header-normal nav.menu .barra__busqueda__2:hover input {
+        animation-name: slide-to-the-left2;
         animation-duration: 0.315s;
         animation-timing-function: linear;
         transition: 1s;
         opacity: 1; }
 
 /*modifica algunos items de lheader*/
+@media screen and (min-width: 740px) {
+  .barra__busqueda__1 input {
+    width: 50VH; }
+  .barra__busqueda__1:hover input {
+    animation-name: slide-to-the-left-50; } }
+
+@media screen and (max-width: 740px) and (min-width: 576px) {
+  .barra__busqueda__1 input {
+    width: 30VH; }
+  .barra__busqueda__1:hover input {
+    animation-name: slide-to-the-left-30; } }
+
+@media screen and (min-width: 576px) {
+  .barra__busqueda__2 {
+    display: none; } }
+
 @media screen and (max-width: 576px) {
   header {
     margin-bottom: 50px; }
@@ -195,13 +310,17 @@ div.galeria-caja-de-item a {
       flex-wrap: nowrap; }
     header .titulo__imagen a {
       align-items: center;
-      justify-content: space-around; }
+      width: 30%; }
       header .titulo__imagen a h1 {
         display: none;
         font-size: 2.1vh; }
       header .titulo__imagen a img {
         width: 10%;
         height: auto; }
+  .barra__busqueda__1 {
+    display: none; }
+  .barra__busqueda__2 {
+    display: block; }
   .menu__big__window {
     display: none; }
   nav.menu {
@@ -587,41 +706,30 @@ body.compras {
 body.inicio {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  border-radius: 10px;
-  background-size: contain;
-  background-image: url("https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-repeat: no-repeat; }
-  body.inicio .backgroundpic {
-    position: relative;
-    margin-top: -50px; }
-    body.inicio .backgroundpic img {
-      width: 100%;
-      height: auto; }
-    body.inicio .backgroundpic .top-right h2 {
-      font-size: 280%; }
-    body.inicio .backgroundpic .top-right {
-      position: absolute;
-      top: -10%;
-      left: 4%; }
-      body.inicio .backgroundpic .top-right h2 {
-        color: black;
-        font-weight: bold;
-        font-family: 'Anton', sans-serif;
-        font-family: 'Balsamiq Sans', cursive; }
-        @media screen and (min-width: 1212px) {
-          body.inicio .backgroundpic .top-right h2 {
-            font-size: 260%; } }
-        @media screen and (min-width: 570px) and (max-width: 1212px) {
-          body.inicio .backgroundpic .top-right h2 {
-            font-size: 110%;
-            text-shadow: 3px -1px 16px white; } }
-        @media screen and (max-width: 570px) {
-          body.inicio .backgroundpic .top-right h2 {
-            font-size: 110%;
-            color: white;
-            text-shadow: 3px -1px 16px black; } }
+  border-radius: 10px; }
+  @media screen and (min-width: 776px) {
+    body.inicio {
+      background-size: contain;
+      background-image: url("https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-repeat: no-repeat; } }
+  @media screen and (max-width: 776px) {
+    body.inicio {
+      background-size: contain;
+      background-image: url("https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+      transition: 0.3s;
+      background-repeat: no-repeat; } }
   body.inicio .img-inside {
     margin-top: -300px; }
+    body.inicio .img-inside h2 {
+      margin-top: -20%;
+      font-family: 'Balsamiq Sans', cursive;
+      text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95); }
+      @media screen and (min-width: 776px) {
+        body.inicio .img-inside h2 {
+          font-size: 340%; } }
+      @media screen and (max-width: 776px) {
+        body.inicio .img-inside h2 {
+          font-size: 140%; } }
     body.inicio .img-inside .fotobottom {
       border-radius: 15px;
       margin: 15px;
@@ -726,6 +834,7 @@ body.inicio {
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
+      background-color: rgba(0, 0, 0, 0.596);
       color: black;
       left: -27px;
       top: 22px; }
@@ -746,8 +855,9 @@ body.inicio {
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
-      color: black;
+      color: white;
       background: black;
+      text-shadow: none;
       left: -29px;
       top: 22px; }
     body.inicio .fila-principal {
@@ -777,8 +887,9 @@ body.inicio {
       padding-right: 5px;
       padding-bottom: 9px;
       margin-bottom: 10px;
-      color: black;
+      color: white;
       background: black;
+      text-shadow: none;
       left: -29px;
       top: 22px; }
     body.inicio .fila-principal {

@@ -401,25 +401,37 @@ div.galeria-caja-de-item a {
         text-decoration: none; }
 
 .header-normal {
-  opacity: 1; }
-  .header-normal .titulo__imagen a {
-    align-items: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.144); }
+  .header-normal .titulo__imagen {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     text-decoration: none;
-    color: white; }
-    .header-normal .titulo__imagen a H1 {
-      font-size: 182%; }
-    .header-normal .titulo__imagen a img {
-      width: 80%;
-      height: auto; }
+    align-items: center;
+    justify-content: space-between; }
+    .header-normal .titulo__imagen a {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-decoration: none;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white; }
+      .header-normal .titulo__imagen a H1 {
+        font-size: 142%; }
+      .header-normal .titulo__imagen a img {
+        justify-self: flex-start;
+        width: 80%;
+        height: auto; }
   .header-normal nav.menu {
     display: flex;
     align-items: center;
-    flex-direction: row;
     justify-content: flex-end;
-    font-size: 85%;
-    font-family: 'Balsamiq Sans', cursive; }
+    font-family: 'Balsamiq Sans', cursive;
+    align-items: center;
+    flex-direction: row;
+    font-size: 100%; }
     .header-normal nav.menu a {
       padding: 10px;
       color: white;
@@ -428,62 +440,66 @@ div.galeria-caja-de-item a {
       text-decoration: none;
       color: red;
       transition: 0.4s; }
-    .header-normal nav.menu .barra__busqueda__1 {
-      color: white;
-      position: relative; }
-      .header-normal nav.menu .barra__busqueda__1 i {
-        padding: 5px; }
-        .header-normal nav.menu .barra__busqueda__1 i:hover {
-          text-decoration: none;
-          color: red; }
-      .header-normal nav.menu .barra__busqueda__1 input {
-        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        width: 50vh;
-        position: absolute;
-        right: 24px;
-        opacity: 0;
-        transition: 0.5s;
-        border-style: none; }
-        .header-normal nav.menu .barra__busqueda__1 input:focus {
-          opacity: 1;
-          border-color: white; }
-      .header-normal nav.menu .barra__busqueda__1:hover input {
-        animation-name: slide-to-the-left;
-        animation-duration: 0.315s;
-        animation-timing-function: linear;
-        transition: 1s;
-        opacity: 1; }
-    .header-normal nav.menu .barra__busqueda__2 {
-      justify-self: flex-end;
-      font-size: 100%;
-      color: black;
-      position: relative; }
-      .header-normal nav.menu .barra__busqueda__2 i {
-        padding: 5px; }
-        .header-normal nav.menu .barra__busqueda__2 i:hover {
-          text-decoration: none;
-          color: red; }
-      .header-normal nav.menu .barra__busqueda__2 input {
-        -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        width: 20vh;
-        position: absolute;
-        right: 24px;
-        opacity: 0;
-        transition: 0.5s;
-        border-style: none; }
-        .header-normal nav.menu .barra__busqueda__2 input:focus {
-          opacity: 1;
-          border-color: white; }
-      .header-normal nav.menu .barra__busqueda__2:hover input {
-        animation-name: slide-to-the-left2;
-        animation-duration: 0.315s;
-        animation-timing-function: linear;
-        transition: 1s;
-        opacity: 1; }
+  .header-normal .barra__busqueda__1 {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 100%;
+    color: white;
+    position: relative; }
+    .header-normal .barra__busqueda__1 i {
+      padding: 5px;
+      color: white; }
+      .header-normal .barra__busqueda__1 i:hover {
+        text-decoration: none;
+        color: red; }
+    .header-normal .barra__busqueda__1 input {
+      -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      position: absolute;
+      right: 24px;
+      opacity: 0;
+      transition: 0.5s;
+      border-style: none; }
+      .header-normal .barra__busqueda__1 input:focus {
+        opacity: 1;
+        border-color: white; }
+    .header-normal .barra__busqueda__1:hover input {
+      animation-duration: 0.315s;
+      animation-timing-function: linear;
+      transition: 1s;
+      opacity: 1; }
+  .header-normal .barra__busqueda__2 {
+    justify-self: flex-end;
+    font-size: 100%;
+    color: white;
+    position: relative; }
+    .header-normal .barra__busqueda__2 i {
+      padding: 5px;
+      color: white; }
+      .header-normal .barra__busqueda__2 i:hover {
+        text-decoration: none;
+        color: red; }
+    .header-normal .barra__busqueda__2 input {
+      -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      width: 20vh;
+      position: absolute;
+      right: 24px;
+      opacity: 0;
+      transition: 0.5s;
+      border-style: none; }
+      .header-normal .barra__busqueda__2 input:focus {
+        opacity: 1;
+        border-color: white; }
+    .header-normal .barra__busqueda__2:hover input {
+      animation-name: slide-to-the-left-20;
+      animation-duration: 0.315s;
+      animation-timing-function: linear;
+      transition: 1s;
+      opacity: 1; }
   .header-normal .fila-principal {
     margin-top: 0;
     margin-bottom: 50px;
@@ -493,8 +509,7 @@ div.galeria-caja-de-item a {
     height: 10%; }
   .header-normal .titulo-lista {
     position: relative;
-    color: white;
-    text-shadow: none;
+    color: Black;
     padding: 10px;
     border: 2px;
     text-align: center;
@@ -519,13 +534,14 @@ div.galeria-caja-de-item a {
       width: 136%; }
     .header-normal #menu-icon {
       display: none; }
+    .header-normal .menu-botton {
+      color: white;
+      display: block; }
     .header-normal .margin-de-inicio {
       margin-bottom: 76%; }
-    .header-normal .menu-botton {
-      text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
-      display: block; }
     .header-normal .titulo-lista {
-      width: 100%; }
+      width: 100%;
+      color: white; }
     .header-normal .sublista,
     .header-normal .sublista-almacenamiento,
     .header-normal .sublista-principal {
@@ -553,7 +569,7 @@ div.galeria-caja-de-item a {
       padding-bottom: 9px;
       margin-bottom: 10px;
       background-color: rgba(0, 0, 0, 0.596);
-      color: white;
+      color: black;
       left: -27px;
       top: 22px; }
     .header-normal .sublista,
@@ -620,17 +636,15 @@ div.galeria-caja-de-item a {
   @media screen and (max-width: 992px) {
     .header-normal .sublista-items i {
       padding: 10px;
-      margin: 5px; }
-      .header-normal .sublista-items i a {
-        width: 30%;
-        color: #8f8484;
-        text-decoration: none; }
+      margin: 5px;
+      width: 30%;
+      color: #8f8484;
+      text-decoration: none; }
       .header-normal .sublista-items i:hover {
+        color: black;
         font-weight: bolder;
         text-decoration: none;
         border-radius: 5px; }
-        .header-normal .sublista-items i:hover a {
-          color: white; }
     .header-normal .margin-de-inicio {
       margin-bottom: 76%; }
     .header-normal .menu-botton {
@@ -681,12 +695,10 @@ div.galeria-caja-de-item a {
       white-space: nowrap; }
       .header-normal .sublista-items ii:hover {
         background-color: rgba(194, 0, 0, 0.664);
-        border-radius: 5px; }
-        .header-normal .sublista-items ii:hover a {
-          color: Black;
-          text-decoration: none; }
+        border-radius: 5px;
+        color: Black;
+        text-decoration: none; }
 
-/*modifica algunos items de lheader*/
 @media screen and (min-width: 740px) {
   .barra__busqueda__1 input {
     width: 50VH; }

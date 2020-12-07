@@ -1281,10 +1281,7 @@ footer {
                 &:hover {
                     a {
                         color: black;
-                    }
-
-                    background: white;
-                }
+                    }                }
             }
         }
     }
@@ -1480,7 +1477,8 @@ body.crearusuario {
     // background-image: url("https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");    winner
     // background-image: url("https://images.pexels.com/photos/1229862/pexels-photo-1229862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); puede ser pa
     // background-image: url("https://images.pexels.com/photos/2148220/pexels-photo-2148220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");esta bueno
-    background-image: url("https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); //viaja eh
+    // background-image: url("https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); //viaja eh
+    background-image: url("../imagenes/imagenesIniciarSesion/pexels-photo-698327.jpeg"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1829,13 +1827,13 @@ body.inicio {
 
     @media screen and (min-width: (776px)) {
         background-size: contain;
-        background-image: url("https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-image: url("../imagenes/imagenesInicio/fondo-de-inicio.jpeg");
         background-repeat: no-repeat;
     }
 
     @media screen and (max-width: (776px)) {
         background-size: contain;
-        background-image: url("https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-image: url("../imagenes/imagenesInicio/fondo-de-inicio-2.jpeg");
         transition: 0.3s;
         background-repeat: no-repeat;
     }

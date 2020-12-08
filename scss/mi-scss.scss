@@ -270,12 +270,7 @@ div.galeria-caja-de-item a {
 
     text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgb(255, 255, 255);
 
-    .color-header-small
-    {
-        background-color: rgba(102, 5, 5, 0.897);
-    }
-
-    .titulo__imagen {
+      .titulo__imagen {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -316,17 +311,14 @@ div.galeria-caja-de-item a {
         font-size: 100%;
         border-radius: 5px;
         position: relative;
-        margin-right: -12%;
+        
 
         .menu__big__window {
-
-            a {
                 padding: $padding10px;
                 color: black;
                 border-radius: 10px;
-            }
 
-            a:hover {
+            &:hover {
                 text-decoration: none;
                 color: $colorHeader;
                 transition: 0.4s;
@@ -335,19 +327,20 @@ div.galeria-caja-de-item a {
 
         .menu__skinny__window {
             border-radius: 5px;
-            // margin-right: -10px;
             button {
                 padding: 10px;
                 margin: 5px;
                 border-style: none;
-                i{
+
+                i {
                     color: rgb(255, 255, 255);
                     border-color: none;
                 }
+
                 border-radius: 10px;
                 background: rgb(73, 69, 69);
             }
-            
+
             button {
                 &:hover {
                     text-decoration: none;
@@ -383,10 +376,10 @@ div.galeria-caja-de-item a {
             border-radius: 4px;
             // width: 50vh;
             position: absolute;
-            right: 24px;
+            right: -2px;
             opacity: 0;
             transition: 0.5s;
-
+        background-color: rgba(255, 255, 255, 0.555);
             border-style: none;
 
             &:focus {
@@ -415,6 +408,7 @@ div.galeria-caja-de-item a {
         font-size: 100%;
         color: black;
         position: relative;
+        font-family: 'Balsamiq Sans', cursive;
 
         i {
             position: absolute;
@@ -463,7 +457,14 @@ div.galeria-caja-de-item a {
 }
 
 // TODO ESTO ES PARA EL MENU de arriba del header
-@media screen and (min-width:740px) {
+  //añade un color al header cuando el width es menor a 576px
+  @media screen and (max-width:575px){
+    .color-header-small {
+        background-color: rgba(102, 5, 5, 0.897);
+    }
+}
+
+@media screen and (min-width:576px) {//le da estilos a barra de busqueda 1, o sea cuandoe s mayor a 576px
     .barra__busqueda__1 {
         input {
             width: 30VH;
@@ -478,39 +479,17 @@ div.galeria-caja-de-item a {
     }
 }
 
-@media screen and (max-width: 740px) and (min-width: 576px) {
-    .barra__busqueda__1 {
-        input {
-            width: 30VH;
-
-        }
-
-        &:hover {
-            input {
-                animation-name: slide-to-the-left-30;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {// para witdh mayor a 576px saco la barra de busqueda 2
     .barra__busqueda__2 {
         display: none;
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) { //si W menor a 576px saco barrade busqueda 1, muevo un poco el margin de nav.menu y acomodo el logo y saco menubigwindow
     header {
-        margin-bottom: 50px;
-
-        nav.menu {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-
         .titulo__imagen a {
             align-items: center;
-            // justify-content: space-around;
+            justify-content: space-around;
             width: 30%;
 
             h1 {
@@ -522,6 +501,12 @@ div.galeria-caja-de-item a {
                 width: 10%;
                 height: auto;
             }
+        }
+        nav.menu{
+            margin-right: -12%;
+            margin-top: -25px;
+            float: right;
+            padding: 10px;
         }
     }
 
@@ -542,15 +527,7 @@ div.galeria-caja-de-item a {
     .menu__big__window {
         display: none;
     }
-
-    nav.menu {
-        float: right;
-        padding: 10px;
-    }
 }
-
-/*modifica algunos items de lheader*/
-
 @media screen and (max-width: 992px) and (min-width: 576px) {
     .titulo__imagen h1 {
         display: none;

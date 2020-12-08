@@ -104,8 +104,6 @@ div.galeria-caja-de-item a {
 /*HEADER------------------------------------------------------*/
 .header-inicio {
   text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px white; }
-  .header-inicio .color-header-small {
-    background-color: rgba(102, 5, 5, 0.897); }
   .header-inicio .titulo__imagen {
     display: flex;
     flex-direction: row;
@@ -137,16 +135,15 @@ div.galeria-caja-de-item a {
     flex-direction: row;
     font-size: 100%;
     border-radius: 5px;
-    position: relative;
-    margin-right: -12%; }
-    .header-inicio nav.menu .menu__big__window a {
+    position: relative; }
+    .header-inicio nav.menu .menu__big__window {
       padding: 10px;
       color: black;
       border-radius: 10px; }
-    .header-inicio nav.menu .menu__big__window a:hover {
-      text-decoration: none;
-      color: red;
-      transition: 0.4s; }
+      .header-inicio nav.menu .menu__big__window:hover {
+        text-decoration: none;
+        color: red;
+        transition: 0.4s; }
     .header-inicio nav.menu .menu__skinny__window {
       border-radius: 5px; }
       .header-inicio nav.menu .menu__skinny__window button {
@@ -179,9 +176,10 @@ div.galeria-caja-de-item a {
       box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       position: absolute;
-      right: 24px;
+      right: -2px;
       opacity: 0;
       transition: 0.5s;
+      background-color: rgba(255, 255, 255, 0.555);
       border-style: none; }
       .header-inicio .barra__busqueda__1 input:focus {
         opacity: 1;
@@ -195,7 +193,8 @@ div.galeria-caja-de-item a {
     justify-self: flex-end;
     font-size: 100%;
     color: black;
-    position: relative; }
+    position: relative;
+    font-family: 'Balsamiq Sans', cursive; }
     .header-inicio .barra__busqueda__2 i {
       position: absolute;
       padding-right: 15px;
@@ -227,13 +226,11 @@ div.galeria-caja-de-item a {
       animation-timing-function: linear;
       transition: 0.4s; }
 
-@media screen and (min-width: 740px) {
-  .barra__busqueda__1 input {
-    width: 30VH; }
-  .barra__busqueda__1:hover input {
-    animation-name: slide-to-the-left-30; } }
+@media screen and (max-width: 575px) {
+  .color-header-small {
+    background-color: rgba(102, 5, 5, 0.897); } }
 
-@media screen and (max-width: 740px) and (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .barra__busqueda__1 input {
     width: 30VH; }
   .barra__busqueda__1:hover input {
@@ -244,20 +241,21 @@ div.galeria-caja-de-item a {
     display: none; } }
 
 @media screen and (max-width: 576px) {
-  header {
-    margin-bottom: 50px; }
-    header nav.menu {
-      display: flex;
-      flex-wrap: nowrap; }
-    header .titulo__imagen a {
-      align-items: center;
-      width: 30%; }
-      header .titulo__imagen a h1 {
-        display: none;
-        font-size: 2.1vh; }
-      header .titulo__imagen a img {
-        width: 10%;
-        height: auto; }
+  header .titulo__imagen a {
+    align-items: center;
+    justify-content: space-around;
+    width: 30%; }
+    header .titulo__imagen a h1 {
+      display: none;
+      font-size: 2.1vh; }
+    header .titulo__imagen a img {
+      width: 10%;
+      height: auto; }
+  header nav.menu {
+    margin-right: -12%;
+    margin-top: -25px;
+    float: right;
+    padding: 10px; }
   .barra__busqueda__1 {
     display: none; }
   .barra__busqueda__2 {
@@ -267,12 +265,8 @@ div.galeria-caja-de-item a {
       padding: 2px;
       margin: 2px; }
   .menu__big__window {
-    display: none; }
-  nav.menu {
-    float: right;
-    padding: 10px; } }
+    display: none; } }
 
-/*modifica algunos items de lheader*/
 @media screen and (max-width: 992px) and (min-width: 576px) {
   .titulo__imagen h1 {
     display: none; }

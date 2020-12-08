@@ -15,70 +15,76 @@ $padding10px: 5px*2;
     padding: $pad;
     margin: $marg;
 }
-@mixin padding--left{
-    @media screen and (max-width:480px){
-        .conteiniciarsesion__con{
-            a{
-               display: inline-block;
-                padding-left:10px;
+
+@mixin padding--left {
+    @media screen and (max-width:480px) {
+        .conteiniciarsesion__con {
+            a {
+                display: inline-block;
+                padding-left: 10px;
                 margin-right: 10px;
             }
         }
     }
-    @media screen and (min-width:480px){
-        .conteiniciarsesion__con{
-            a{
-                padding-left:60px;
+
+    @media screen and (min-width:480px) {
+        .conteiniciarsesion__con {
+            a {
+                padding-left: 60px;
             }
         }
     }
 }
-@mixin Facebook {
-    @media screen and (min-width:480px){
 
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
+@mixin Facebook {
+    @media screen and (min-width:480px) {
+
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1024px-Facebook_New_Logo_%282015%29.svg.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
     }
-    @media screen and (max-width:480px){
+
+    @media screen and (max-width:480px) {
         background-image: url("../imagenes/imagenesIniciarSesion/faceicon.png");
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
-        
+
     }
 }
 
 @mixin Google {
-    @media screen and (min-width:480px){
-    background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-@media screen and (max-width:480px){
-    background-image: url("../imagenes/imagenesIniciarSesion/googleicon.png");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
+    @media screen and (min-width:480px) {
+        background-image: url("https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_960_720.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width:480px) {
+        background-image: url("../imagenes/imagenesIniciarSesion/googleicon.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
     }
 }
 
 @mixin Apple {
-    
-    @media screen and (min-width:480px){
+
+    @media screen and (min-width:480px) {
         background-image: url("https://i.pinimg.com/originals/c7/9e/e3/c79ee3ccd3bd8f8c911f87f7f4f2f41d.png");
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
     }
-    @media screen and (max-width:480px){
+
+    @media screen and (max-width:480px) {
         background-image: url("../imagenes/imagenesIniciarSesion/appleicon.png");
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
-        }
+    }
 }
 
 
@@ -262,9 +268,12 @@ div.galeria-caja-de-item a {
 /*HEADER------------------------------------------------------*/
 .header-inicio {
 
-    opacity: 1;
-    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
-    background-color: rgba(0, 0, 0, 0.144);
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgb(255, 255, 255);
+
+    .color-header-small
+    {
+        background-color: rgba(102, 5, 5, 0.897);
+    }
 
     .titulo__imagen {
         display: flex;
@@ -305,17 +314,47 @@ div.galeria-caja-de-item a {
         align-items: center;
         flex-direction: row;
         font-size: 100%;
+        border-radius: 5px;
+        position: relative;
+        margin-right: -12%;
 
-        a {
-            padding: $padding10px;
-            color: black;
-            border-radius: 10px;
+        .menu__big__window {
+
+            a {
+                padding: $padding10px;
+                color: black;
+                border-radius: 10px;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: $colorHeader;
+                transition: 0.4s;
+            }
         }
 
-        a:hover {
-            text-decoration: none;
-            color: $colorHeader;
-            transition: 0.4s;
+        .menu__skinny__window {
+            border-radius: 5px;
+            // margin-right: -10px;
+            button {
+                padding: 10px;
+                margin: 5px;
+                border-style: none;
+                i{
+                    color: rgb(255, 255, 255);
+                    border-color: none;
+                }
+                border-radius: 10px;
+                background: rgb(109, 106, 106);
+            }
+            
+            button {
+                &:hover {
+                    text-decoration: none;
+                    color: $colorHeader;
+                    transition: 0.4s;
+                }
+            }
         }
 
     }
@@ -330,6 +369,7 @@ div.galeria-caja-de-item a {
 
         i {
             padding: 5px;
+
             &:hover {
                 text-decoration: none;
                 color: $colorHeader;
@@ -375,47 +415,53 @@ div.galeria-caja-de-item a {
         font-size: 100%;
         color: black;
         position: relative;
-        
+
         i {
             position: absolute;
-            padding: 5px;
-            &:hover {
-                text-decoration: none;
-                color: $colorHeader;
-            }
-
+            padding-right: 15px;
+            margin-right: -25px;
+            top: -2px;
+            text-decoration: none;
+            color: black;
+            // z-index: 1;
         }
 
-        input {
+        .input-search {
             -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
             box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
             border-radius: 4px;
-            width: 20vh;
+            width: 30vh;
             position: absolute;
-            right: 24px;
+            right: 4px;
+            top: -2px;
             opacity: 0;
             transition: 0.5s;
             border-style: none;
 
             &:focus {
-                opacity: 1;
+                opacity: 0.85;
                 border-color: rgb(255, 255, 255);
+                animation-name: slide-to-the-left-30;
+                animation-duration: 0.315s;
+                animation-timing-function: linear;
+                transition: 0.4s;
             }
         }
 
         &:hover {
             input {
-                animation-name: slide-to-the-left-20;
+                animation-name: slide-to-the-left-30;
                 animation-duration: 0.315s;
                 animation-timing-function: linear;
                 transition: 0.4s;
-                opacity: 1;
-
+                // opacity: 1;
             }
+
         }
 
     }
 }
+
 // TODO ESTO ES PARA EL MENU de arriba del header
 @media screen and (min-width:740px) {
     .barra__busqueda__1 {
@@ -486,10 +532,11 @@ div.galeria-caja-de-item a {
     .barra__busqueda__2 {
         display: block;
         padding-right: 30px;
-      i{
-          padding: 2px;
-          margin: 2px;
-      }
+
+        i {
+            padding: 2px;
+            margin: 2px;
+        }
     }
 
     .menu__big__window {
@@ -559,7 +606,8 @@ footer {
                 &:hover {
                     a {
                         color: black;
-                    }                }
+                    }
+                }
             }
         }
     }
@@ -685,6 +733,7 @@ body.iniciodesesion {
         }
 
         @include padding--left();
+
         .conteiniciarsesion__con {
             margin-bottom: 90px;
 
@@ -698,6 +747,7 @@ body.iniciodesesion {
                 // background-image: url("https://www.clipartkey.com/mpngs/m/204-2047835_apple-logo-with-words-clipart-png-download-apple.png");
                 // background-image: url("https://e7.pngegg.com/pngimages/398/839/png-clipart-carplay-macbook-pro-apple-imac-united-states-name-text-logo.png");
                 @include Apple();
+
                 a {
                     color: white;
                     text-decoration: none;
@@ -733,7 +783,7 @@ body.iniciodesesion {
                     color: $blanco;
                     text-decoration: none;
                 }
-                
+
 
             }
         }
@@ -755,7 +805,7 @@ body.crearusuario {
     // background-image: url("https://images.pexels.com/photos/1229862/pexels-photo-1229862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); puede ser pa
     // background-image: url("https://images.pexels.com/photos/2148220/pexels-photo-2148220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");esta bueno
     // background-image: url("https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); //viaja eh
-    background-image: url("../imagenes/imagenesIniciarSesion/pexels-photo-698327.jpeg"); 
+    background-image: url("../imagenes/imagenesIniciarSesion/pexels-photo-698327.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -875,10 +925,11 @@ body.crearusuario {
                 text-decoration: none;
             }
         }
-  
-    
+
+
+    }
 }
-}
+
 body.compras {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -1074,18 +1125,17 @@ body.inicio {
 
     @media screen and (max-width: (776px)) {
         background-size: contain;
-        background-image: url("../imagenes/imagenesInicio/fondo-de-inicio3.jpeg");
+        background-image: url("https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
         transition: 0.3s;
         background-repeat: no-repeat;
-        #titulo-de-inicio{
+
+        #titulo-de-inicio {
             color: white;
-            text-shadow: 0px 0px 4px rgb(0, 0, 0);;
+            text-shadow: 0px 0px 4px rgb(0, 0, 0);
+            ;
             transition: 0.3s;
         }
-        #search-icon{
-            color: white;
-            text-shadow: none;
-        }
+
     }
 
     .img-inside {
@@ -1107,12 +1157,13 @@ body.inicio {
                 font-size: 340%;
             }
 
-            @media screen and (max-width:776px) and (min-width:580px)  {
+            @media screen and (max-width:776px) and (min-width:580px) {
                 font-size: 240%;
                 margin-top: -40%;
                 width: 130%;
             }
-            @media screen and (max-width:580px){
+
+            @media screen and (max-width:580px) {
                 font-size: 140%;
                 margin-left: 30px;
                 margin-top: 50px;

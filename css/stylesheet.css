@@ -103,9 +103,9 @@ div.galeria-caja-de-item a {
 
 /*HEADER------------------------------------------------------*/
 .header-inicio {
-  opacity: 1;
-  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
-  background-color: rgba(0, 0, 0, 0.144); }
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px white; }
+  .header-inicio .color-header-small {
+    background-color: rgba(102, 5, 5, 0.897); }
   .header-inicio .titulo__imagen {
     display: flex;
     flex-direction: row;
@@ -135,15 +135,33 @@ div.galeria-caja-de-item a {
     font-family: 'Balsamiq Sans', cursive;
     align-items: center;
     flex-direction: row;
-    font-size: 100%; }
-    .header-inicio nav.menu a {
+    font-size: 100%;
+    border-radius: 5px;
+    position: relative;
+    margin-right: -12%; }
+    .header-inicio nav.menu .menu__big__window a {
       padding: 10px;
       color: black;
       border-radius: 10px; }
-    .header-inicio nav.menu a:hover {
+    .header-inicio nav.menu .menu__big__window a:hover {
       text-decoration: none;
       color: red;
       transition: 0.4s; }
+    .header-inicio nav.menu .menu__skinny__window {
+      border-radius: 5px; }
+      .header-inicio nav.menu .menu__skinny__window button {
+        padding: 10px;
+        margin: 5px;
+        border-style: none;
+        border-radius: 10px;
+        background: #6d6a6a; }
+        .header-inicio nav.menu .menu__skinny__window button i {
+          color: white;
+          border-color: none; }
+      .header-inicio nav.menu .menu__skinny__window button:hover {
+        text-decoration: none;
+        color: red;
+        transition: 0.4s; }
   .header-inicio .barra__busqueda__1 {
     align-items: center;
     flex-direction: row;
@@ -180,29 +198,34 @@ div.galeria-caja-de-item a {
     position: relative; }
     .header-inicio .barra__busqueda__2 i {
       position: absolute;
-      padding: 5px; }
-      .header-inicio .barra__busqueda__2 i:hover {
-        text-decoration: none;
-        color: red; }
-    .header-inicio .barra__busqueda__2 input {
+      padding-right: 15px;
+      margin-right: -25px;
+      top: -2px;
+      text-decoration: none;
+      color: black; }
+    .header-inicio .barra__busqueda__2 .input-search {
       -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
       box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
-      width: 20vh;
+      width: 30vh;
       position: absolute;
-      right: 24px;
+      right: 4px;
+      top: -2px;
       opacity: 0;
       transition: 0.5s;
       border-style: none; }
-      .header-inicio .barra__busqueda__2 input:focus {
-        opacity: 1;
-        border-color: white; }
+      .header-inicio .barra__busqueda__2 .input-search:focus {
+        opacity: 0.85;
+        border-color: white;
+        animation-name: slide-to-the-left-30;
+        animation-duration: 0.315s;
+        animation-timing-function: linear;
+        transition: 0.4s; }
     .header-inicio .barra__busqueda__2:hover input {
-      animation-name: slide-to-the-left-20;
+      animation-name: slide-to-the-left-30;
       animation-duration: 0.315s;
       animation-timing-function: linear;
-      transition: 0.4s;
-      opacity: 1; }
+      transition: 0.4s; }
 
 @media screen and (min-width: 740px) {
   .barra__busqueda__1 input {
@@ -688,16 +711,13 @@ body.inicio {
   @media screen and (max-width: 776px) {
     body.inicio {
       background-size: contain;
-      background-image: url("../imagenes/imagenesInicio/fondo-de-inicio3.jpeg");
+      background-image: url("https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       transition: 0.3s;
       background-repeat: no-repeat; }
       body.inicio #titulo-de-inicio {
         color: white;
         text-shadow: 0px 0px 4px black;
-        transition: 0.3s; }
-      body.inicio #search-icon {
-        color: white;
-        text-shadow: none; } }
+        transition: 0.3s; } }
   body.inicio .img-inside {
     margin-top: 300px; }
     body.inicio .img-inside h2 {

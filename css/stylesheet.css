@@ -361,96 +361,100 @@ section.lista-de-productos-big .boton-desplega-lista {
     transform: rotate(-90deg); }
 
 @media screen and (min-width: 996px) {
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 30px;
-    display: flex;
-    padding: 4px;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    white-space: nowrap;
-    transition: 0.5s; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    transform: rotate(90deg);
-    transition: 0.4s; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) a {
-    text-decoration: none;
-    background: none;
-    color: #020202;
-    pointer-events: initial; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
-    opacity: 0;
-    transform: translateY(10em);
-    transform: translateX(10em);
-    pointer-events: none; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
-    pointer-events: none; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
-      background-color: black;
-      color: white;
-      transition: 0.3s; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista {
+    border-radius: 10px; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
+      background-color: white;
+      border-radius: 10px;
+      position: absolute;
+      top: 30px;
+      display: flex;
+      padding: 4px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      white-space: nowrap;
+      transition: 0.5s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      transform: rotate(90deg);
+      transition: 0.4s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) a {
       text-decoration: none;
       background: none;
       color: #020202;
       pointer-events: initial; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
-      transition: 0.4s;
-      -ms-transform: rotate(-90deg);
-      /* IE 9 */
-      transform: rotate(-90deg); } }
-
-@media screen and (max-width: 996px) {
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
-    position: relative;
-    display: flex;
-    padding: 4px;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    white-space: nowrap; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) {
-    background-color: rgba(255, 255, 255, 0); }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
-      transition: 0.4s;
-      -ms-transform: rotate(90deg);
-      /* IE 9 */
-      transform: rotate(90deg); }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
       opacity: 0;
-      display: none;
-      transition: 1s; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
-    pointer-events: none; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
-      color: black;
-      opacity: 1; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
-      text-decoration: none;
-      background: none;
-      color: #020202;
-      pointer-events: initial; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista-1 {
-      animation-name: crecimiento;
-      height: 300px;
-      animation-duration: 0.2s; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista {
-      animation-name: aparecer-despacito;
-      animation-duration: 1s; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
-      transition: 0.4s;
-      -ms-transform: rotate(-90deg);
-      /* IE 9 */
-      transform: rotate(-90deg); } }
+      transform: translateY(10em);
+      transform: translateX(10em);
+      pointer-events: none; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
+      pointer-events: none; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
+        background-color: black;
+        color: white;
+        transition: 0.3s; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
+        text-decoration: none;
+        background: none;
+        color: #020202;
+        pointer-events: initial; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
+        transition: 0.4s;
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        transform: rotate(-90deg); } }
+
+@media screen and (max-width: 996px) {
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista {
+    border-radius: 10px; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
+      position: relative;
+      display: flex;
+      padding: 4px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      white-space: nowrap; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) {
+      background-color: rgba(255, 255, 255, 0); }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
+        transition: 0.4s;
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        transform: rotate(90deg); }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
+        opacity: 0;
+        display: none;
+        transition: 1s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
+      pointer-events: none; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
+        color: black;
+        opacity: 1; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
+        text-decoration: none;
+        background: none;
+        color: #020202;
+        pointer-events: initial; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista-1 {
+        animation-name: crecimiento;
+        height: 300px;
+        animation-duration: 0.2s; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista {
+        animation-name: aparecer-despacito;
+        animation-duration: 1s; }
+      section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
+        transition: 0.4s;
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        transform: rotate(-90deg); } }
 
 @media screen and (min-width: 576px) and (max-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container {

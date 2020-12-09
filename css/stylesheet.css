@@ -295,12 +295,13 @@ section.lista-de-productos-big .color-de-columna {
   padding: 5px;
   border-radius: 3px; }
 
-section.lista-de-productos-big button.boton-desplega-lista {
+section.lista-de-productos-big .boton-desplega-lista {
   display: flex;
   background-color: rgba(255, 255, 255, 0);
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
+  font-size: 115%;
   width: 180px;
   border-style: none;
   border-radius: 10px;
@@ -308,56 +309,54 @@ section.lista-de-productos-big button.boton-desplega-lista {
   margin: 2px;
   outline: none;
   border-style: none; }
-  section.lista-de-productos-big button.boton-desplega-lista .sublista,
-  section.lista-de-productos-big button.boton-desplega-lista .sublista-1 {
+  section.lista-de-productos-big .boton-desplega-lista .sublista,
+  section.lista-de-productos-big .boton-desplega-lista .sublista-1 {
     background-color: white;
     border-radius: 10px;
     position: absolute;
-    top: 30px;
+    top: 28px;
     display: flex;
     padding: 4px;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
     white-space: nowrap;
-    transition: 0.5s; }
-  section.lista-de-productos-big button.boton-desplega-lista span {
+    transition: 0.3s; }
+  section.lista-de-productos-big .boton-desplega-lista span {
     background-color: white;
     padding: 3px;
     border-radius: 10px; }
-  section.lista-de-productos-big button.boton-desplega-lista i {
+  section.lista-de-productos-big .boton-desplega-lista i {
     padding: 3px;
     margin: 1px; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
+  section.lista-de-productos-big .boton-desplega-lista:not(:hover) i.icono-de-sublista-down {
     display: none; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
+  section.lista-de-productos-big .boton-desplega-lista:not(:hover) i.icono-de-sublista-right {
     display: inline; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) a {
+  section.lista-de-productos-big .boton-desplega-lista:not(:hover) a {
     text-decoration: none;
     background: none;
     color: #020202;
-    pointer-events: initial; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) .sublista,
-  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) .sublista-1 {
+    pointer-events: none; }
+  section.lista-de-productos-big .boton-desplega-lista:not(:hover) .sublista,
+  section.lista-de-productos-big .boton-desplega-lista:not(:hover) .sublista-1 {
     opacity: 0;
     transform: translateY(10em);
     transform: translateX(10em);
     pointer-events: none; }
-  section.lista-de-productos-big button.boton-desplega-lista:focus {
-    pointer-events: none; }
-    section.lista-de-productos-big button.boton-desplega-lista:focus span {
-      background-color: black;
-      color: white;
-      transition: 0.3s; }
-    section.lista-de-productos-big button.boton-desplega-lista:focus a {
-      text-decoration: none;
-      background: none;
-      color: #020202;
-      pointer-events: initial; }
-    section.lista-de-productos-big button.boton-desplega-lista:focus i.icono-de-sublista-right {
-      display: none; }
-    section.lista-de-productos-big button.boton-desplega-lista:focus i.icono-de-sublista-down {
-      display: inline; }
+  section.lista-de-productos-big .boton-desplega-lista:hover span {
+    background-color: black;
+    color: white;
+    transition: 0.3s; }
+  section.lista-de-productos-big .boton-desplega-lista:hover a {
+    text-decoration: none;
+    background: none;
+    color: #020202;
+    pointer-events: initial; }
+  section.lista-de-productos-big .boton-desplega-lista:hover i.icono-de-sublista-right {
+    display: none; }
+  section.lista-de-productos-big .boton-desplega-lista:hover i.icono-de-sublista-down {
+    display: inline; }
 
 @media screen and (min-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
@@ -492,10 +491,14 @@ section.lista-de-productos-big button.boton-desplega-lista {
   .menu__big__window {
     display: none; } }
 
-@media screen and (max-width: 992px) and (min-width: 576px) {
+@media screen and (max-width: 900px) and (min-width: 576px) {
   .titulo__imagen h1 {
     display: none; }
   .menu__big__window {
+    display: none; } }
+
+@media screen and (max-width: 992px) and (min-width: 900px) {
+  .menu__skinny__window {
     display: none; } }
 
 /*modifica algunos items de lheader*/

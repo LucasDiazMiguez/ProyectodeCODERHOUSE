@@ -253,12 +253,12 @@ div.galeria-caja-de-item a {
     opacity: 1; } }
 
 /*FILA PRINCIPAL NUEVA*/
-/* si el width es mayor a 1276px solo muestra el section big, sino el small*/
-@media screen and (min-width: 1276px) {
+/* si el width es mayor a 1400px solo muestra el section big, sino el small*/
+@media screen and (min-width: 1400px) {
   section.lista-de-productos-small {
     display: none; } }
 
-@media screen and (max-width: 1276px) {
+@media screen and (max-width: 1400px) {
   section.lista-de-productos-big {
     display: none; } }
 
@@ -268,6 +268,7 @@ section.lista-de-productos-small .color-de-columna {
 
 section.lista-de-productos-small button.boton-desplega-lista {
   display: flex;
+  background-color: rgba(255, 255, 255, 0);
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
@@ -281,7 +282,120 @@ section.lista-de-productos-small button.boton-desplega-lista {
   section.lista-de-productos-small button.boton-desplega-lista i {
     padding: 3px;
     margin: 1px; }
-  section.lista-de-productos-small button.boton-desplega-lista .sublista {
+  section.lista-de-productos-small button.boton-desplega-lista .sublista, section.lista-de-productos-small button.boton-desplega-lista .sublista-1 {
+    margin-top: 2px;
+    background-color: white;
+    border-radius: 5px; }
+  section.lista-de-productos-small button.boton-desplega-lista span {
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px; }
+
+section.lista-de-productos-big .color-de-columna {
+  padding: 5px;
+  border-radius: 3px; }
+
+section.lista-de-productos-big button.boton-desplega-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 180px;
+  border-style: none;
+  border-radius: 10px;
+  position: relative;
+  margin: 2px;
+  outline: none;
+  border-style: none; }
+  section.lista-de-productos-big button.boton-desplega-lista i {
+    padding: 3px;
+    margin: 1px; }
+  section.lista-de-productos-big button.boton-desplega-lista .sublista {
+    position: relative;
+    display: flex;
+    padding: 4px;
+    justify-content: start;
+    align-items: flex-start;
+    white-space: nowrap; }
+    section.lista-de-productos-big button.boton-desplega-lista .sublista .sublista-items-div {
+      display: flex;
+      padding: 4px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start; }
+  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) i.icono-de-sublista-down {
+    display: none; }
+  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) i.icono-de-sublista-right {
+    display: inline; }
+  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) .sublista {
+    opacity: 0;
+    display: none; }
+  section.lista-de-productos-big button.boton-desplega-lista:hover {
+    animation-name: aparecer-despacito;
+    animation-duration: 1s;
+    pointer-events: none; }
+    section.lista-de-productos-big button.boton-desplega-lista:hover a {
+      text-decoration: none;
+      background: none;
+      color: #020202;
+      pointer-events: initial; }
+    section.lista-de-productos-big button.boton-desplega-lista:hover .sublista-1 {
+      animation-name: crecimiento;
+      height: 300px;
+      animation-duration: 0.2s; }
+    section.lista-de-productos-big button.boton-desplega-lista:hover i.icono-de-sublista-right {
+      display: none; }
+    section.lista-de-productos-big button.boton-desplega-lista:hover i.icono-de-sublista-down {
+      display: inline; }
+
+@media screen and (min-width: 996px) {
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    white-space: nowrap;
+    transition: 0.5s; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
+    display: none; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
+    display: inline; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) a {
+    text-decoration: none;
+    background: none;
+    color: #020202;
+    pointer-events: initial; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
+    opacity: 0;
+    transform: translateY(10em);
+    transform: translateX(10em);
+    pointer-events: none; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
+    pointer-events: none; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
+      background-color: black;
+      color: white;
+      transition: 0.3s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
+      text-decoration: none;
+      background: none;
+      color: #020202;
+      pointer-events: initial; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
+      display: none; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-down {
+      display: inline; } }
+
+@media screen and (max-width: 996px) {
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
     position: relative;
     display: flex;
     padding: 4px;
@@ -289,32 +403,40 @@ section.lista-de-productos-small button.boton-desplega-lista {
     justify-content: start;
     align-items: flex-start;
     white-space: nowrap; }
-  section.lista-de-productos-small button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
-    display: none; }
-  section.lista-de-productos-small button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
-    display: inline; }
-  section.lista-de-productos-small button.boton-desplega-lista:not(:focus) .sublista {
-    opacity: 0;
-    display: none; }
-  section.lista-de-productos-small button.boton-desplega-lista:focus {
-    animation-name: aparecer-despacito;
-    animation-duration: 1s;
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) {
+    background-color: rgba(255, 255, 255, 0); }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
+      display: none; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
+      display: inline; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
+      opacity: 0;
+      display: none;
+      transition: 1s; }
+  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
     pointer-events: none; }
-    section.lista-de-productos-small button.boton-desplega-lista:focus a {
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {
+      color: black;
+      opacity: 1; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus a {
       text-decoration: none;
       background: none;
       color: #020202;
       pointer-events: initial; }
-    section.lista-de-productos-small button.boton-desplega-lista:focus .sublista-1 {
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista-1 {
       animation-name: crecimiento;
       height: 300px;
       animation-duration: 0.2s; }
-    section.lista-de-productos-small button.boton-desplega-lista:focus i.icono-de-sublista-right {
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus .sublista {
+      animation-name: aparecer-despacito;
+      animation-duration: 1s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
       display: none; }
-    section.lista-de-productos-small button.boton-desplega-lista:focus i.icono-de-sublista-down {
-      display: inline; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-down {
+      display: inline; } }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container {
     margin-left: 0px; } }
 
@@ -807,7 +929,7 @@ body.inicio {
   body.inicio .img-inside {
     margin-top: 300px; }
     body.inicio .img-inside h2 {
-      margin-top: -10%;
+      margin-top: 10%;
       font-family: 'Balsamiq Sans', cursive;
       text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95); }
       @media screen and (min-width: 776px) and (max-width: 991px) {

@@ -554,6 +554,21 @@ $height-div-10:($height)/10;
     animation-duration:1s; 
 }
 /*FILA PRINCIPAL NUEVA*/
+
+/* si el width es mayor a 1276px solo muestra el section big, sino el small*/
+@media screen and (min-width:1276px) {
+    section.lista-de-productos-small {
+       display: none;
+    }
+}    
+@media screen and (max-width:1276px) {
+    section.lista-de-productos-big {
+       display: none;
+    }
+}    
+/////////////////////////////////////////////////////////////////////////////////
+
+
 section.lista-de-productos-small {
     .color-de-columna {
         // background: rgb(57, 57, 65);
@@ -625,6 +640,13 @@ section.lista-de-productos-small {
         }
     }
 }
+@media screen and (min-width:576px) {
+    section.lista-de-productos-small {
+        .lista-de-productos-small-container{
+            margin-left: 0px;
+        }
+    }
+}    
 
 // TODO ESTO ES PARA EL MENU de arriba del header
 //añade un color al header cuando el width es menor a 576px

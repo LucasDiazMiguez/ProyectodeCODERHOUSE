@@ -253,6 +253,15 @@ div.galeria-caja-de-item a {
     opacity: 1; } }
 
 /*FILA PRINCIPAL NUEVA*/
+/* si el width es mayor a 1276px solo muestra el section big, sino el small*/
+@media screen and (min-width: 1276px) {
+  section.lista-de-productos-small {
+    display: none; } }
+
+@media screen and (max-width: 1276px) {
+  section.lista-de-productos-big {
+    display: none; } }
+
 section.lista-de-productos-small .color-de-columna {
   padding: 5px;
   border-radius: 3px; }
@@ -304,6 +313,10 @@ section.lista-de-productos-small button.boton-desplega-lista {
       display: none; }
     section.lista-de-productos-small button.boton-desplega-lista:focus i.icono-de-sublista-down {
       display: inline; }
+
+@media screen and (min-width: 576px) {
+  section.lista-de-productos-small .lista-de-productos-small-container {
+    margin-left: 0px; } }
 
 @media screen and (max-width: 575px) {
   .color-header-small {

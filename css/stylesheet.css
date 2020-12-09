@@ -17,20 +17,6 @@
   to {
     opacity: 1; } }
 
-@keyframes slide-to-the-left-50 {
-  0% {
-    width: 0; }
-  20% {
-    width: 10vh; }
-  40% {
-    width: 20vh; }
-  60% {
-    width: 30vh; }
-  80% {
-    width: 40vh; }
-  100% {
-    width: 50vh; } }
-
 @keyframes slide-to-the-left-30 {
   0% {
     width: 0; }

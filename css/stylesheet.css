@@ -297,6 +297,7 @@ section.lista-de-productos-big .color-de-columna {
 
 section.lista-de-productos-big button.boton-desplega-lista {
   display: flex;
+  background-color: rgba(255, 255, 255, 0);
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
@@ -307,45 +308,55 @@ section.lista-de-productos-big button.boton-desplega-lista {
   margin: 2px;
   outline: none;
   border-style: none; }
+  section.lista-de-productos-big button.boton-desplega-lista .sublista,
+  section.lista-de-productos-big button.boton-desplega-lista .sublista-1 {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    white-space: nowrap;
+    transition: 0.5s; }
+  section.lista-de-productos-big button.boton-desplega-lista span {
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px; }
   section.lista-de-productos-big button.boton-desplega-lista i {
     padding: 3px;
     margin: 1px; }
-  section.lista-de-productos-big button.boton-desplega-lista .sublista {
-    position: relative;
-    display: flex;
-    padding: 4px;
-    justify-content: start;
-    align-items: flex-start;
-    white-space: nowrap; }
-    section.lista-de-productos-big button.boton-desplega-lista .sublista .sublista-items-div {
-      display: flex;
-      padding: 4px;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-start; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) i.icono-de-sublista-down {
+  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
     display: none; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) i.icono-de-sublista-right {
+  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
     display: inline; }
-  section.lista-de-productos-big button.boton-desplega-lista:not(:hover) .sublista {
+  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) a {
+    text-decoration: none;
+    background: none;
+    color: #020202;
+    pointer-events: initial; }
+  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) .sublista,
+  section.lista-de-productos-big button.boton-desplega-lista:not(:focus) .sublista-1 {
     opacity: 0;
-    display: none; }
-  section.lista-de-productos-big button.boton-desplega-lista:hover {
-    animation-name: aparecer-despacito;
-    animation-duration: 1s;
+    transform: translateY(10em);
+    transform: translateX(10em);
     pointer-events: none; }
-    section.lista-de-productos-big button.boton-desplega-lista:hover a {
+  section.lista-de-productos-big button.boton-desplega-lista:focus {
+    pointer-events: none; }
+    section.lista-de-productos-big button.boton-desplega-lista:focus span {
+      background-color: black;
+      color: white;
+      transition: 0.3s; }
+    section.lista-de-productos-big button.boton-desplega-lista:focus a {
       text-decoration: none;
       background: none;
       color: #020202;
       pointer-events: initial; }
-    section.lista-de-productos-big button.boton-desplega-lista:hover .sublista-1 {
-      animation-name: crecimiento;
-      height: 300px;
-      animation-duration: 0.2s; }
-    section.lista-de-productos-big button.boton-desplega-lista:hover i.icono-de-sublista-right {
+    section.lista-de-productos-big button.boton-desplega-lista:focus i.icono-de-sublista-right {
       display: none; }
-    section.lista-de-productos-big button.boton-desplega-lista:hover i.icono-de-sublista-down {
+    section.lista-de-productos-big button.boton-desplega-lista:focus i.icono-de-sublista-down {
       display: inline; }
 
 @media screen and (min-width: 996px) {
@@ -489,6 +500,12 @@ section.lista-de-productos-big button.boton-desplega-lista {
 
 /*modifica algunos items de lheader*/
 @media screen and (min-width: 992px) {
+  header .titulo__imagen a {
+    align-items: center;
+    justify-content: space-around;
+    width: 30%; }
+    header .titulo__imagen a h1 {
+      margin-top: 8px; }
   .menu__skinny__window {
     display: none; } }
 

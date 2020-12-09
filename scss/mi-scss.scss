@@ -636,42 +636,44 @@ section.lista-de-productos-big {
 
     button.boton-desplega-lista {
         display: flex;
+        background-color: rgba(255, 255, 255, 0);
         flex-direction: column;
         justify-content: start;
         align-items: flex-start;
         width: 180px;
         border-style: none;
-        // background-color: rgba(123, 123, 216, 0.753);
         border-radius: 10px;
         position: relative;
         margin: 2px;
         outline: none;
         border-style: none;
+        .sublista,
+        .sublista-1 {
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
 
+            top: 30px;
+            display: flex;
+            padding: 4px;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            white-space: nowrap;
+            transition: 0.5s;
+        }
+        span {
+            background-color: white;
+            padding: 3px;
+            border-radius: 10px;
+        }
+        
         i {
             padding: 3px;
             margin: 1px;
         }
 
-        .sublista {
-            position: relative;
-            display: flex;
-            padding: 4px;
-            justify-content: start;
-            align-items: flex-start;
-            white-space: nowrap;
-
-            .sublista-items-div {
-                display: flex;
-                padding: 4px;
-                flex-direction: column;
-                justify-content: start;
-                align-items: flex-start;
-            }
-
-        }
-
-        &:not(:hover) {
+        &:not(:focus) {
             i.icono-de-sublista-down {
                 display: none;
             }
@@ -680,13 +682,6 @@ section.lista-de-productos-big {
                 display: inline;
             }
 
-            .sublista {
-                opacity: 0;
-                display: none;
-            }
-        }
-
-        &:hover {
             a {
                 text-decoration: none;
                 background: none;
@@ -695,9 +690,29 @@ section.lista-de-productos-big {
 
             }
 
+            .sublista,
             .sublista-1 {
+                opacity: 0;
+                // display: none;
+                transform: translateY(10em);
+                transform: translateX(10em);
+                pointer-events: none;
+            }
+        }
 
-                @include crecimientofunc();
+        &:focus {
+            span {
+                background-color: black;
+                color: white;
+                transition: 0.3s;
+            }
+
+            a {
+                text-decoration: none;
+                background: none;
+                color: rgb(2, 2, 2);
+                pointer-events: initial;
+
             }
 
             i.icono-de-sublista-right {
@@ -708,7 +723,6 @@ section.lista-de-productos-big {
                 display: inline;
             }
 
-            @include aparecer-despacito-func();
             pointer-events: none;
         }
     }
@@ -718,7 +732,7 @@ section.lista-de-productos-big {
     section.lista-de-productos-small {
         .lista-de-productos-small-container {
             button.boton-desplega-lista {
-
+                
                 .sublista,
                 .sublista-1 {
                     background-color: white;
@@ -969,6 +983,16 @@ section.lista-de-productos-big {
 
 
 @media screen and (min-width: 992px) {
+    header {
+        .titulo__imagen a {
+            align-items: center;
+            justify-content: space-around;
+            width: 30%;
+            h1{
+                margin-top: 8px;
+            }
+        }
+    }
 
     //saca el menu_skinny_window
     .menu__skinny__window {

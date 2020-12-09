@@ -105,29 +105,6 @@ $padding10px: 5px*2;
     }
 }
 
-// @keyframes crecimiento {
-//     0% {
-//         height: 0;
-//     }
-
-//     20% {
-//         height: (initial)/16;
-//     }
-//     40% {
-//         height: (initial)/8;
-//     }
-//     60%{
-//         height: (initial)/4;
-//     }
-//     80%{
-//         height: (initial)/2;
-
-//     }
-//     100% {
-//         height: auto;
-//     }
-// }
-
 @keyframes aparecer-despacito {
     from {
         opacity: 0;
@@ -137,32 +114,6 @@ $padding10px: 5px*2;
         opacity: 1;
     }
 }
-
-// @keyframes slide-to-the-left-50 {
-//     0% {
-//         width: 0;
-//     }
-
-//     20% {
-//         width: 10vh;
-//     }
-
-//     40% {
-//         width: 20vh;
-//     }
-
-//     60% {
-//         width: 30vh;
-//     }
-
-//     80% {
-//         width: 40vh;
-//     }
-
-//     100% {
-//         width: 50vh;
-//     }
-// }
 
 @keyframes slide-to-the-left-30 {
     0% {
@@ -215,28 +166,6 @@ $padding10px: 5px*2;
         width: 20vh;
     }
 }
-
-// @keyframes example {
-//     from {
-//         background-color: red;
-//     }
-//     to {
-//         background-color: yellow;
-//     }
-// }
-
-/*------------------------------------------------------------------*/
-//CLASE GLOBAL------------------------------------------------------------------A
-/* clase prehecha para hacer los items de una galeria--------------------------*/
-// <div class="col-lg-3 col-md-6 galeria-caja-de-item">
-//                         <a href="">
-//                             <div class="galeria-foto-titulo">
-//                                 <img src="imagenes/ImagenesNotebooks/Notebook Dell Intel I3 1005g1 4gb 1tb 15.6 Vostro 3591.webp" alt="">
-//                                 <h6 class="flotante">Camara Web Webcam Usb Pc Full Hd 1080p Plug & Play Microfono</h6>
-//                             </div>
-//                             <h6 class="galeria-precio"> Precio: 4999$ </h6>
-//                         </a>
-//                     </div>
 div.galeria-caja-de-item a {
     height: 400px;
     display: flex;
@@ -418,6 +347,8 @@ div.galeria-caja-de-item a {
             position: absolute;
             right: -2px;
             opacity: 0;
+            top: -5px;
+            padding: 8px;
             transition: 0.5s;
             background-color: rgba(255, 255, 255, 0.555);
             border-style: none;
@@ -467,7 +398,8 @@ div.galeria-caja-de-item a {
             width: 30vh;
             position: absolute;
             right: 4px;
-            top: -2px;
+            top: -6px;
+            padding: 8px;
             opacity: 0;
             transition: 0.5s;
             border-style: none;
@@ -835,8 +767,8 @@ section.lista-de-productos-big {
                 &:focus {
                     span {
                         // background-color: rgb(71, 38, 38);
-                        color: black;
-                        opacity: 1;
+                        background-color: black;
+                        color: white;
                     }
 
                     a {
@@ -932,7 +864,7 @@ section.lista-de-productos-big {
 
         nav.menu {
             margin-right: -12%;
-            margin-top: -25px;
+            margin-top: -15px;
             float: right;
             padding: 10px;
         }

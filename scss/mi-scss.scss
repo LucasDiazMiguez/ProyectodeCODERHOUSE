@@ -675,12 +675,12 @@ section.lista-de-productos-big {
         }
 
         &:not(:hover) {
-            i.icono-de-sublista-down {
-                display: none;
-            }
-
-            i.icono-de-sublista-right {
-                display: inline;
+            
+            i.icono-de-sublista-right{
+                -ms-transform: rotate(90deg); /* IE 9 */
+                transform: rotate(90deg);
+                transition: 0.4s;
+                // display: inline;
             }
 
             a {
@@ -714,12 +714,10 @@ section.lista-de-productos-big {
 
             }
 
-            i.icono-de-sublista-right {
-                display: none;
-            }
-
-            i.icono-de-sublista-down {
-                display: inline;
+            i.icono-de-sublista-right{
+                transition: 0.4s;
+                -ms-transform: rotate(-90deg); /* IE 9 */
+                transform: rotate(-90deg);
             }
         }
     }
@@ -747,13 +745,13 @@ section.lista-de-productos-big {
                 }
 
                 &:not(:focus) {
-                    i.icono-de-sublista-down {
-                        display: none;
-                    }
-
-                    i.icono-de-sublista-right {
-                        display: inline;
-                    }
+                    
+            i.icono-de-sublista-right{
+                -ms-transform: rotate(90deg); /* IE 9 */
+                transform: rotate(90deg);
+                transition: 0.4s;
+                // display: inline;
+            }
 
                     a {
                         text-decoration: none;
@@ -788,12 +786,10 @@ section.lista-de-productos-big {
 
                     }
 
-                    i.icono-de-sublista-right {
-                        display: none;
-                    }
-
-                    i.icono-de-sublista-down {
-                        display: inline;
+                    i.icono-de-sublista-right{
+                        transition: 0.4s;
+                        -ms-transform: rotate(-90deg); /* IE 9 */
+                        transform: rotate(-90deg);
                     }
 
                     pointer-events: none;
@@ -822,12 +818,10 @@ section.lista-de-productos-big {
                 &:not(:focus) {
                     background-color: rgba(255, 255, 255, 0);
 
-                    i.icono-de-sublista-down {
-                        display: none;
-                    }
-
-                    i.icono-de-sublista-right {
-                        display: inline;
+                    i.icono-de-sublista-right{
+                        transition: 0.4s;
+                        -ms-transform: rotate(90deg); /* IE 9 */
+                        transform: rotate(90deg);
                     }
 
                     .sublista,
@@ -860,13 +854,10 @@ section.lista-de-productos-big {
                     .sublista {
                         @include aparecer-despacito-func();
                     }
-
-                    i.icono-de-sublista-right {
-                        display: none;
-                    }
-
-                    i.icono-de-sublista-down {
-                        display: inline;
+                    i.icono-de-sublista-right{
+                        transition: 0.4s;
+                        -ms-transform: rotate(-90deg); /* IE 9 */
+                        transform: rotate(-90deg);
                     }
 
                     pointer-events: none;

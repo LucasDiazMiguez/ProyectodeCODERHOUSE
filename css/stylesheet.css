@@ -329,10 +329,11 @@ section.lista-de-productos-big .boton-desplega-lista {
   section.lista-de-productos-big .boton-desplega-lista i {
     padding: 3px;
     margin: 1px; }
-  section.lista-de-productos-big .boton-desplega-lista:not(:hover) i.icono-de-sublista-down {
-    display: none; }
   section.lista-de-productos-big .boton-desplega-lista:not(:hover) i.icono-de-sublista-right {
-    display: inline; }
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    transform: rotate(90deg);
+    transition: 0.4s; }
   section.lista-de-productos-big .boton-desplega-lista:not(:hover) a {
     text-decoration: none;
     background: none;
@@ -354,9 +355,10 @@ section.lista-de-productos-big .boton-desplega-lista {
     color: #020202;
     pointer-events: initial; }
   section.lista-de-productos-big .boton-desplega-lista:hover i.icono-de-sublista-right {
-    display: none; }
-  section.lista-de-productos-big .boton-desplega-lista:hover i.icono-de-sublista-down {
-    display: inline; }
+    transition: 0.4s;
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    transform: rotate(-90deg); }
 
 @media screen and (min-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
@@ -372,10 +374,11 @@ section.lista-de-productos-big .boton-desplega-lista {
     align-items: flex-start;
     white-space: nowrap;
     transition: 0.5s; }
-  section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
-    display: none; }
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
-    display: inline; }
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    transform: rotate(90deg);
+    transition: 0.4s; }
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) a {
     text-decoration: none;
     background: none;
@@ -399,9 +402,10 @@ section.lista-de-productos-big .boton-desplega-lista {
       color: #020202;
       pointer-events: initial; }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
-      display: none; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-down {
-      display: inline; } }
+      transition: 0.4s;
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      transform: rotate(-90deg); } }
 
 @media screen and (max-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista,
@@ -415,10 +419,11 @@ section.lista-de-productos-big .boton-desplega-lista {
     white-space: nowrap; }
   section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) {
     background-color: rgba(255, 255, 255, 0); }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-down {
-      display: none; }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
-      display: inline; }
+      transition: 0.4s;
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      transform: rotate(90deg); }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista,
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 {
       opacity: 0;
@@ -442,9 +447,10 @@ section.lista-de-productos-big .boton-desplega-lista {
       animation-name: aparecer-despacito;
       animation-duration: 1s; }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-right {
-      display: none; }
-    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus i.icono-de-sublista-down {
-      display: inline; } }
+      transition: 0.4s;
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      transform: rotate(-90deg); } }
 
 @media screen and (min-width: 576px) and (max-width: 996px) {
   section.lista-de-productos-small .lista-de-productos-small-container {

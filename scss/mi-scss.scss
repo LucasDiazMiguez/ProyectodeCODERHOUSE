@@ -234,6 +234,197 @@ div.galeria-caja-de-item a {
 
 // ...........................................................................................................................................
 /*HEADER------------------------------------------------------*/
+.header-inicio-1 {
+
+    .titulo__imagen {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-decoration: none;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            H1 {
+                color: white;
+                font-size: 142%;
+            }
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            text-decoration: none;
+            justify-content: space-evenly;
+            align-items: center;
+
+            color: $negro;
+
+            img {
+                justify-self: flex-start;
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+
+    nav.menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: 'Balsamiq Sans', cursive;
+        align-items: center;
+        flex-direction: row;
+        font-size: 100%;
+        border-radius: 5px;
+        position: relative;
+
+
+        .menu__big__window {
+            padding: $padding10px;
+            color: white;
+            border-radius: 10px;
+
+            &:hover {
+                text-decoration: none;
+                color: $colorHeader;
+                transition: 0.4s;
+            }
+        }
+
+        .menu__skinny__window {
+            border-radius: 5px;
+
+            button {
+                padding: 10px;
+                margin: 5px;
+                border-style: none;
+
+                i {
+                    color: rgb(255, 255, 255);
+                    border-color: none;
+                }
+
+                border-radius: 10px;
+                background: rgb(73, 69, 69);
+            }
+
+            button {
+                &:hover {
+                    text-decoration: none;
+                    color: $colorHeader;
+                    transition: 0.4s;
+                }
+            }
+        }
+
+    }
+
+    .barra__busqueda__1 {
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 100%;
+        color: white;
+        position: relative;
+
+        i {
+            padding: 5px;
+
+            &:hover {
+                text-decoration: none;
+                color: $colorHeader;
+            }
+
+        }
+
+        input {
+            -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            // width: 50vh;
+            position: absolute;
+            right: -2px;
+            opacity: 0;
+            top: -5px;
+            padding: 8px;
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.555);
+            border-style: none;
+
+            &:focus {
+                opacity: 1;
+
+                // border-width: 1px;
+                border-color: rgb(255, 255, 255);
+            }
+        }
+
+        &:hover {
+            input {
+                // animation-name: slide-to-the-left-50;
+                animation-duration: 0.315s;
+                animation-timing-function: linear;
+                transition: 1s;
+                opacity: 1;
+
+            }
+        }
+
+    }
+
+    .barra__busqueda__2 {
+        justify-self: flex-end;
+        font-size: 100%;
+        color: black;
+        position: relative;
+        font-family: 'Balsamiq Sans', cursive;
+
+        i {
+            position: absolute;
+            padding-right: 15px;
+            margin-right: -25px;
+            top: -2px;
+            text-decoration: none;
+            color: black;
+            // z-index: 1;
+        }
+
+        .input-search {
+            -webkit-box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            width: 30vh;
+            position: absolute;
+            right: 4px;
+            top: -6px;
+            padding: 8px;
+            opacity: 0;
+            transition: 0.5s;
+            border-style: none;
+
+            &:focus {
+                opacity: 0.85;
+                border-color: rgb(255, 255, 255);
+                animation-name: slide-to-the-left-30;
+                animation-duration: 0.315s;
+                animation-timing-function: linear;
+                transition: 0.4s;
+            }
+        }
+
+        &:hover {
+            input {
+                animation-name: slide-to-the-left-30;
+                animation-duration: 0.315s;
+                animation-timing-function: linear;
+                transition: 0.4s;
+                // opacity: 1;
+            }
+
+        }
+
+    }
+}
 .header-inicio {
 
     text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgb(255, 255, 255);
@@ -427,6 +618,7 @@ div.galeria-caja-de-item a {
 
     }
 }
+//solo cambia el color del header..
 
 /*key frames para fila PRINCIPAL NUEVA */
 $height:300px;
@@ -559,13 +751,7 @@ section.lista-de-productos-small {
 }
 
 section.lista-de-productos-big {
-    .color-de-columna {
-        // background: rgb(57, 57, 65);
-        // background: linear-gradient(90deg, rgba(57, 57, 65, 1) 51%, rgba(49, 49, 57, 0) 69%);
-        padding: 5px;
-        border-radius: 3px;
-    }
-
+    background-color: white;
     .boton-desplega-lista {
         display: flex;
         background-color: rgba(255, 255, 255, 0);
@@ -913,6 +1099,9 @@ section.lista-de-productos-big {
             align-items: center;
             justify-content: space-around;
             width: 30%;
+            img{
+                margin-left: 30px;
+            }
             h1{
                 margin-top: 8px;
             }
@@ -949,6 +1138,7 @@ footer {
                 font-size: 80%;
                 color: gray;
                 text-decoration: none;
+                white-space: nowrap;
             }
 
             li {
@@ -980,28 +1170,6 @@ body.iniciodesesion {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: white;
-
-    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/12/RAM-RGB.jpg");
-    // background-image: url("https://d26lpennugtm8s.cloudfront.net/stores/135/412/products/r022d408gx2_041-1e045bb705147f22a315982951152339-1024-1024.png");
-    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/12/XTREEM-ARGB-01.jpg");
-    // background-image: url("https://www.overclockers.co.uk/media/image/thumbnail/HS00FJB_248902_800x800.jpg");    
-    // background-image: url("https://www.overclockers.co.uk/media/image/thumbnail/HS00FJB_248901_800x800.jpg");
-
-    // background-image: url("https://www.pcgamesn.com/wp-content/uploads/legacy/Corsair_ARGB_memory.gif");
-    // background-image: url("https://www.pcgamesn.com/wp-content/uploads/legacy/Corsair_ARGB_memory.gif");
-    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/01/Thermaltake-Memoria-RAM-H2O.jpg");
-    // background-image: url("https://static.kemikcdn.com/2019/10/MiGamingLapX9.jpg");
-    // background-image: url("https://hardzone.es/app/uploads-hardzone.es/2019/02/Raijintek-fos-add-cable-ppt03.jpg");
-    // background-image: url("https://media.kingston.com/hyperx/hero/hx-hero-mice-pulsefire-fps-pro-lg.jpg");
-    // background-image: url("https://sta3-nzxtcorporation.netdna-ssl.com/uploads/share/NZXT/Hue2%20Video/RGB/Covering-marque.jpg");
-    // background-image: url("https://www.hd-tecnologia.com/imagenes/articulos/2018/10/REVIEW-CORSAIR-VENGEANCE-RGB-PRO.jpg");
-    // background-image: url("https://cwsmgmt.corsair.com/pdp/loops/QL_Ping.gif");
-    // background-image: url("https://xtrfy.com/wp/wp-content/uploads/2017/05/Xtrfy-K2-life-01-1024x512.jpg");
-    // background-image: url("https://images.pexels.com/photos/841228/pexels-photo-841228.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    // background-image: url("https://images.pexels.com/photos/3812048/pexels-photo-3812048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    // background-image: url("https://images.pexels.com/photos/5303957/pexels-photo-5303957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    // background-image: url("https://image.freepik.com/foto-gratis/cerca-teclado-juegos-computer-rgb-iluminado-led-color_75775-618.jpg");
-    // background-image: url("https://24.lv/images/detailed/400/hx-product-keyboard-alloy-fps-rgb-us-3-zm-lg.jpg");
     background-image: url("../imagenes/imagenesIniciarSesion/fondo-iniciar-sesion.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1035,17 +1203,6 @@ body.iniciodesesion {
                 box-shadow: 0 5px 10px 0px #0002;
             }
 
-            .conteiniciarsesion__form__nowrap {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-
-                label {
-                    padding-top: 10px;
-                }
-            }
-
             #conteiniciarsesion__form--submit {
                 margin-left: 0;
             }
@@ -1061,19 +1218,19 @@ body.iniciodesesion {
             .conteiniciarsesion__form__botones {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                white-space: nowrap;
                 margin-left: 2px;
-
+                
                 a {
+                    white-space: nowrap;
                     margin-left: 15px;
                     text-decoration: none;
                     // padding: $padding10px;
                     border-radius: 10px;
-                    color: $blanco;
-                    padding: 3px;
+                    color: rgb(12, 11, 11);
+                    padding: 2px;
 
                 }
 
@@ -1149,17 +1306,6 @@ body.crearusuario {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     background-color: white;
-    // background-image: url("https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    // background-image: url("../imagenes/imagenesIniciarSesion/fondo-crear-usuario.jpeg");
-    // background-image: url("https://images.pexels.com/photos/5412270/pexels-photo-5412270.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-    // background-image: url("https://images.pexels.com/photos/4195406/pexels-photo-4195406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    // background-image: url("https://images.pexels.com/photos/4065705/pexels-photo-4065705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    // background-image: url("https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    // background-image: url("https://images.pexels.com/photos/5499587/pexels-photo-5499587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    // background-image: url("https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");    winner
-    // background-image: url("https://images.pexels.com/photos/1229862/pexels-photo-1229862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); puede ser pa
-    // background-image: url("https://images.pexels.com/photos/2148220/pexels-photo-2148220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");esta bueno
-    // background-image: url("https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); //viaja eh
     background-image: url("../imagenes/imagenesIniciarSesion/pexels-photo-698327.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1203,11 +1349,25 @@ body.crearusuario {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                margin: 10px;
+                margin: 20px;
                 padding-right: 50px;
-
+                select{
+                    &:focus {
+                        border-color: black;
+                        border-width: 3px;
+                    }
+    
+                    border-radius: 10em;
+                    outline: 0;
+                    border: 2px solid #aaa;
+                    background-color: #fff;
+                    color: $negro;
+                    padding: 0.2em 1em;
+                    box-shadow: 0 5px 10px 0px #0002;
+                }
                 label {
                     margin-top: 8px;
+                    white-space: nowrap;
                 }
             }
         }
@@ -1225,7 +1385,7 @@ body.crearusuario {
             }
         }
     }
-
+    @include padding--left();
     .conteiniciarsesion__con {
         margin-bottom: 90px;
 
@@ -1241,7 +1401,6 @@ body.crearusuario {
             @include Apple();
 
             a {
-                padding-left: 60px;
                 color: white;
                 text-decoration: none;
             }
@@ -1259,7 +1418,6 @@ body.crearusuario {
 
 
             a {
-                padding-left: 60px;
                 color: $blanco;
                 text-decoration: none;
             }
@@ -1275,7 +1433,6 @@ body.crearusuario {
             @include Google();
 
             a {
-                padding-left: 60px;
                 color: $blanco;
                 text-decoration: none;
             }
@@ -1283,6 +1440,7 @@ body.crearusuario {
 
 
     }
+
 }
 
 body.compras {
@@ -1501,27 +1659,29 @@ body.inicio {
             font-family: 'Balsamiq Sans', cursive;
             text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.95), 0px 0px 1px rgba(255, 255, 255, 0.95);
 
+            
+            @media screen and(min-width:991px) {
+                font-size: 340%;
+                margin-bottom: 300px;
+            }
             @media screen and (min-width:776px) and(max-width:991px) {
                 font-size: 240%;
                 width: 230%;
-                margin-left: -30px;
-                margin-top: -50px;
+                margin-left: -170px;
+                margin-top: -180px;
             }
-
-            @media screen and(min-width:991px) {
-                font-size: 340%;
-            }
-
-            @media screen and (max-width:776px) and (min-width:580px) {
+            
+            @media screen and (max-width:776px) and (min-width:576px) {
                 font-size: 240%;
                 margin-top: -40%;
                 width: 130%;
             }
 
-            @media screen and (max-width:580px) {
+            @media screen and (max-width:576px) {
                 font-size: 140%;
                 margin-left: 30px;
-                margin-top: 50px;
+                margin-top: -55%;
+                margin-bottom: -32px;
             }
         }
 

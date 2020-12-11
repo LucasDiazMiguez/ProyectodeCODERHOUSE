@@ -408,6 +408,8 @@ section.lista-de-productos-small button.boton-desplega-lista {
   margin: 2px;
   outline: none;
   border-style: none; }
+  section.lista-de-productos-small button.boton-desplega-lista a {
+    font-family: 'Ubuntu', sans-serif; }
   section.lista-de-productos-small button.boton-desplega-lista i {
     padding: 3px;
     margin: 1px; }
@@ -449,6 +451,10 @@ section.lista-de-productos-big {
       align-items: flex-start;
       white-space: nowrap;
       transition: 0.3s; }
+    section.lista-de-productos-big .boton-desplega-lista .sublista-1 {
+      width: 220px; }
+    section.lista-de-productos-big .boton-desplega-lista .sublista-almacenamiento {
+      width: 230px; }
     section.lista-de-productos-big .boton-desplega-lista span {
       background-color: white;
       padding: 3px;
@@ -503,6 +509,8 @@ section.lista-de-productos-big {
       align-items: flex-start;
       white-space: nowrap;
       transition: 0.5s; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-almacenamiento {
+      width: 165px; }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) i.icono-de-sublista-right {
       -ms-transform: rotate(90deg);
       /* IE 9 */
@@ -560,6 +568,11 @@ section.lista-de-productos-big {
         opacity: 0;
         display: none;
         transition: 1s; }
+        section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista a,
+        section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:not(:focus) .sublista-1 a {
+          font-family: 'Ubuntu', sans-serif; }
+    section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista .sublista-1 {
+      width: 200px; }
     section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus {
       pointer-events: none; }
       section.lista-de-productos-small .lista-de-productos-small-container button.boton-desplega-lista:focus span {

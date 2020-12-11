@@ -732,7 +732,9 @@ section.lista-de-productos-small {
         margin: 2px;
         outline: none;
         border-style: none;
-
+        a{
+            font-family: 'Ubuntu', sans-serif;
+        }
         i {
             padding: 3px;
             margin: 1px;
@@ -780,6 +782,12 @@ section.lista-de-productos-big {
             align-items: flex-start;
             white-space: nowrap;
             transition: 0.3s;
+        }
+        .sublista-1{
+            width: 220px;
+        }
+        .sublista-almacenamiento{
+            width: 230px;
         }
         span {
             background-color: white;
@@ -861,7 +869,9 @@ section.lista-de-productos-big {
                     white-space: nowrap;
                     transition: 0.5s;
                 }
-
+                .sublista-almacenamiento{
+                    width: 165px;
+                }
                 &:not(:focus) {
                     
             i.icono-de-sublista-right{
@@ -947,9 +957,14 @@ section.lista-de-productos-big {
                         opacity: 0;
                         display: none;
                         transition: 1s;
+                        a{
+                            font-family: 'Ubuntu', sans-serif;
+                        }
                     }
                 }
-
+                .sublista-1{
+                    width: 200px;
+                }
                 &:focus {
                     span {
                         // background-color: rgb(71, 38, 38);
